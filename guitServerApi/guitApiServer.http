@@ -1,0 +1,6 @@
+@guitApiServer_HostAddress = http://localhost:5026
+
+GET {{guitApiServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
