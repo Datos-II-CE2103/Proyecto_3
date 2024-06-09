@@ -5,14 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using DiffMatchPatch;
+using Operation = Microsoft.AspNetCore.JsonPatch.Operations.Operation;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -54,7 +50,7 @@ public class CommitsController : ControllerBase
         _context.Commits.Add(commit);
         _context.SaveChanges();
 
-        var storagePath = Path.Combine("./STORAGE/", repositoryName); // Actualiza el path según sea necesario
+        var storagePath = Path.Combine("/path/to/your/storage", repositoryName); // Actualiza el path según sea necesario
 
         // Verificar y crear el directorio si no existe
         if (!Directory.Exists(storagePath))
@@ -97,14 +93,15 @@ public class CommitsController : ControllerBase
             }
             else
             {
-                var previousContent = GetPreviousFileContent(existingFile.Id);
-                var delta = CalculateDelta(previousContent, System.IO.File.ReadAllBytes(filePath));
+                var previousContent = Encoding.UTF8.GetString(GetPreviousFileContent(existingFile.Id));
+                var newContent = System.IO.File.ReadAllText(filePath);
+                var delta = CalculateDelta(previousContent, newContent);
 
                 var fileDelta = new FileDelta
                 {
                     FileId = existingFile.Id,
                     CommitId = commit.Id,
-                    Delta = delta, // Almacenar solo los cambios
+                    Delta = Encoding.UTF8.GetBytes(delta), // Almacenar solo los cambios
                     CreatedAt = DateTime.UtcNow
                 };
 
@@ -174,27 +171,102 @@ public class CommitsController : ControllerBase
         return File(fileContent, "application/octet-stream", filename);
     }
 
-    private byte[] ReconstructFileContent(List<FileDelta> fileDeltas)
+    /// <summary>
+    /// Gets the status of a file, showing its change history.
+    /// </summary>
+    /// <param name="repositoryName">The repository name.</param>
+    /// <param name="filename">The filename to get the status for.</param>
+    /// <returns>The change history of the file.</returns>
+    [HttpGet("{repositoryName}/status")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public IActionResult GetFileStatus(string repositoryName, [FromQuery] string filename)
     {
-        // Implementa la lógica para reconstruir el contenido del archivo a partir de los deltas
-        var fileContent = new List<byte>();
-        foreach (var delta in fileDeltas)
+        var repository = _context.Repositories.FirstOrDefault(r => r.Name == repositoryName);
+        if (repository == null)
         {
-            fileContent.AddRange(delta.Delta); // Simplificación, ajustar según la lógica de deltas
+            return NotFound("Repository not found.");
         }
 
-        return fileContent.ToArray();
+        var file = _context.Files.FirstOrDefault(f => f.RepositoryId == repository.Id && f.FilePath.EndsWith(filename));
+        if (file == null)
+        {
+            return NotFound("File not found.");
+        }
+
+        var fileDeltas = _context.FileDeltas
+            .Where(fd => fd.FileId == file.Id)
+            .OrderBy(fd => fd.CreatedAt)
+            .ToList();
+
+        var status = new StringBuilder();
+        var dmp = new diff_match_patch();
+        string previousContent = "";
+
+        foreach (var delta in fileDeltas)
+        {
+            var commit = _context.Commits.FirstOrDefault(c => c.Id == delta.CommitId);
+            if (commit != null)
+            {
+                var newContent = Encoding.UTF8.GetString(delta.Delta);
+                var diffs = dmp.diff_main(previousContent, newContent);
+                dmp.diff_cleanupSemantic(diffs);
+
+                status.AppendLine($"Commit Hash: {commit.CommitHash}");
+                status.AppendLine($"Commit Date: {commit.CreatedAt}");
+                status.AppendLine("Changes:");
+
+                foreach (var diff in diffs)
+                {
+                    switch (diff.operation)
+                    {
+                        case Operation.INSERT:
+                            status.AppendLine($"Added: {diff.text}");
+                            break;
+                        case Operation.DELETE:
+                            status.AppendLine($"Deleted: {diff.text}");
+                            break;
+                        case Operation.EQUAL:
+                            status.AppendLine($"Modified: {diff.text}");
+                            break;
+                    }
+                }
+                status.AppendLine(new string('-', 40));
+                previousContent = newContent;
+            }
+        }
+
+        return Ok(status.ToString());
+    }
+
+    private byte[] ReconstructFileContent(List<FileDelta> fileDeltas)
+    {
+        var dmp = new diff_match_patch();
+        string fileContent = "";
+        foreach (var delta in fileDeltas)
+        {
+            var diffs = dmp.diff_fromDelta(fileContent, Encoding.UTF8.GetString(delta.Delta));
+            fileContent = dmp.diff_text2(diffs);
+        }
+
+        return Encoding.UTF8.GetBytes(fileContent);
     }
 
     private byte[] GetPreviousFileContent(int fileId)
     {
-        // Implementa la lógica para recuperar el contenido anterior del archivo
-        return new byte[0];
+        var fileDeltas = _context.FileDeltas
+            .Where(fd => fd.FileId == fileId)
+            .OrderBy(fd => fd.CreatedAt)
+            .ToList();
+
+        return ReconstructFileContent(fileDeltas);
     }
 
-    private byte[] CalculateDelta(byte[] oldContent, byte[] newContent)
+    private string CalculateDelta(string oldContent, string newContent)
     {
-        // Implementa la lógica para calcular el delta entre el contenido antiguo y el nuevo
-        return newContent;
+        var dmp = new diff_match_patch();
+        var diffs = dmp.diff_main(oldContent, newContent);
+        dmp.diff_cleanupSemantic(diffs);
+        return dmp.diff_toDelta(diffs);
     }
 }
