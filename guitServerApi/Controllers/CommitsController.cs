@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -8,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DiffMatchPatch;
-using Operation = Microsoft.AspNetCore.JsonPatch.Operations.Operation;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -21,13 +18,6 @@ public class CommitsController : ControllerBase
         _context = context;
     }
 
-    /// <summary>
-    /// Commits changes to a repository.
-    /// </summary>
-    /// <param name="repositoryName">The repository name.</param>
-    /// <param name="message">The commit message.</param>
-    /// <param name="files">The files to commit.</param>
-    /// <returns>The created commit.</returns>
     [HttpPost("{repositoryName}/commit")]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -50,13 +40,15 @@ public class CommitsController : ControllerBase
         _context.Commits.Add(commit);
         _context.SaveChanges();
 
-        var storagePath = Path.Combine("/path/to/your/storage", repositoryName); // Actualiza el path según sea necesario
+        var storagePath = Path.Combine("/.STORAGE/", repositoryName); // Actualiza el path según sea necesario
 
         // Verificar y crear el directorio si no existe
         if (!Directory.Exists(storagePath))
         {
             Directory.CreateDirectory(storagePath);
         }
+
+        var dmp = new diff_match_patch();
 
         foreach (var file in files)
         {
@@ -85,7 +77,7 @@ public class CommitsController : ControllerBase
                 {
                     FileId = newFile.Id,
                     CommitId = commit.Id,
-                    Delta = System.IO.File.ReadAllBytes(filePath), // Almacenar el contenido completo como delta inicial
+                    Delta = Encoding.UTF8.GetBytes(System.IO.File.ReadAllText(filePath)), // Almacenar el contenido completo como delta inicial
                     CreatedAt = DateTime.UtcNow
                 };
 
@@ -95,7 +87,9 @@ public class CommitsController : ControllerBase
             {
                 var previousContent = Encoding.UTF8.GetString(GetPreviousFileContent(existingFile.Id));
                 var newContent = System.IO.File.ReadAllText(filePath);
-                var delta = CalculateDelta(previousContent, newContent);
+                var diffs = dmp.diff_main(previousContent, newContent);
+                dmp.diff_cleanupSemantic(diffs);
+                var delta = diffsToString(diffs);
 
                 var fileDelta = new FileDelta
                 {
@@ -114,11 +108,6 @@ public class CommitsController : ControllerBase
         return CreatedAtAction(nameof(GetCommit), new { id = commit.Id }, commit);
     }
 
-    /// <summary>
-    /// Gets a commit by ID.
-    /// </summary>
-    /// <param name="id">The commit ID.</param>
-    /// <returns>The commit with the specified ID.</returns>
     [HttpGet("{id}")]
     public IActionResult GetCommit(int id)
     {
@@ -131,13 +120,6 @@ public class CommitsController : ControllerBase
         return Ok(commit);
     }
 
-    /// <summary>
-    /// Rollback a file to a specific commit version.
-    /// </summary>
-    /// <param name="repositoryName">The repository name.</param>
-    /// <param name="filename">The filename to rollback.</param>
-    /// <param name="commitHash">The commit hash to rollback to.</param>
-    /// <returns>The file content at the specified commit.</returns>
     [HttpGet("{repositoryName}/rollback")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -171,12 +153,6 @@ public class CommitsController : ControllerBase
         return File(fileContent, "application/octet-stream", filename);
     }
 
-    /// <summary>
-    /// Gets the status of a file, showing its change history.
-    /// </summary>
-    /// <param name="repositoryName">The repository name.</param>
-    /// <param name="filename">The filename to get the status for.</param>
-    /// <returns>The change history of the file.</returns>
     [HttpGet("{repositoryName}/status")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -200,56 +176,38 @@ public class CommitsController : ControllerBase
             .ToList();
 
         var status = new StringBuilder();
-        var dmp = new diff_match_patch();
-        string previousContent = "";
 
         foreach (var delta in fileDeltas)
         {
             var commit = _context.Commits.FirstOrDefault(c => c.Id == delta.CommitId);
             if (commit != null)
             {
-                var newContent = Encoding.UTF8.GetString(delta.Delta);
-                var diffs = dmp.diff_main(previousContent, newContent);
-                dmp.diff_cleanupSemantic(diffs);
-
                 status.AppendLine($"Commit Hash: {commit.CommitHash}");
                 status.AppendLine($"Commit Date: {commit.CreatedAt}");
                 status.AppendLine("Changes:");
 
-                foreach (var diff in diffs)
-                {
-                    switch (diff.operation)
-                    {
-                        case Operation.INSERT:
-                            status.AppendLine($"Added: {diff.text}");
-                            break;
-                        case Operation.DELETE:
-                            status.AppendLine($"Deleted: {diff.text}");
-                            break;
-                        case Operation.EQUAL:
-                            status.AppendLine($"Modified: {diff.text}");
-                            break;
-                    }
-                }
+                var deltaText = Encoding.UTF8.GetString(delta.Delta);
+                status.AppendLine(deltaText);
+
                 status.AppendLine(new string('-', 40));
-                previousContent = newContent;
             }
         }
 
         return Ok(status.ToString());
     }
 
-    private byte[] ReconstructFileContent(List<FileDelta> fileDeltas)
+    private string ReconstructFileContent(List<FileDelta> fileDeltas)
     {
         var dmp = new diff_match_patch();
         string fileContent = "";
         foreach (var delta in fileDeltas)
         {
-            var diffs = dmp.diff_fromDelta(fileContent, Encoding.UTF8.GetString(delta.Delta));
+            var deltaText = Encoding.UTF8.GetString(delta.Delta);
+            var diffs = stringToDiffs(deltaText);
             fileContent = dmp.diff_text2(diffs);
         }
 
-        return Encoding.UTF8.GetBytes(fileContent);
+        return fileContent;
     }
 
     private byte[] GetPreviousFileContent(int fileId)
@@ -259,7 +217,7 @@ public class CommitsController : ControllerBase
             .OrderBy(fd => fd.CreatedAt)
             .ToList();
 
-        return ReconstructFileContent(fileDeltas);
+        return Encoding.UTF8.GetBytes(ReconstructFileContent(fileDeltas));
     }
 
     private string CalculateDelta(string oldContent, string newContent)
@@ -267,6 +225,38 @@ public class CommitsController : ControllerBase
         var dmp = new diff_match_patch();
         var diffs = dmp.diff_main(oldContent, newContent);
         dmp.diff_cleanupSemantic(diffs);
-        return dmp.diff_toDelta(diffs);
+        return diffsToString(diffs);
+    }
+
+    private string diffsToString(List<Diff> diffs)
+    {
+        var result = new StringBuilder();
+        foreach (var diff in diffs)
+        {
+            result.Append(diff.operation.ToString()).Append(": ").Append(diff.text).AppendLine();
+        }
+        return result.ToString();
+    }
+
+    private List<Diff> stringToDiffs(string deltaText)
+    {
+        var dmp = new diff_match_patch();
+        var diffs = new List<Diff>();
+        var lines = deltaText.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+        foreach (var line in lines)
+        {
+            if (string.IsNullOrWhiteSpace(line))
+                continue;
+
+            var parts = line.Split(new[] { ": " }, 2, StringSplitOptions.None);
+            if (parts.Length != 2)
+                continue;
+
+            var operation = (Operation)Enum.Parse(typeof(Operation), parts[0]);
+            var text = parts[1];
+
+            diffs.Add(new Diff(operation, text));
+        }
+        return diffs;
     }
 }
