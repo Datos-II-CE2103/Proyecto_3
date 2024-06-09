@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-
 [Route("api/[controller]")]
 [ApiController]
 public class CommitsController : ControllerBase
@@ -22,16 +21,16 @@ public class CommitsController : ControllerBase
     /// <summary>
     /// Commits changes to a repository.
     /// </summary>
-    /// <param name="repositoryId">The repository ID.</param>
+    /// <param name="repositoryName">The repository name.</param>
     /// <param name="message">The commit message.</param>
     /// <param name="files">The files to commit.</param>
     /// <returns>The created commit.</returns>
-    [HttpPost("{repositoryId}/commit")]
+    [HttpPost("{repositoryName}/commit")]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] string message, [FromForm] List<IFormFile> files)
+    public async Task<IActionResult> CommitChanges(string repositoryName, [FromForm] string message, [FromForm] List<IFormFile> files)
     {
-        var repository = _context.Repositories.Find(repositoryId);
+        var repository = _context.Repositories.FirstOrDefault(r => r.Name == repositoryName);
         if (repository == null)
         {
             return NotFound("Repository not found.");
@@ -39,7 +38,7 @@ public class CommitsController : ControllerBase
 
         var commit = new Commit
         {
-            RepositoryId = repositoryId,
+            RepositoryId = repository.Id,
             CommitHash = Guid.NewGuid().ToString(), // Generar un hash de commit único
             Message = message,
             CreatedAt = DateTime.UtcNow
@@ -48,7 +47,7 @@ public class CommitsController : ControllerBase
         _context.Commits.Add(commit);
         _context.SaveChanges();
 
-        var storagePath = Path.Combine("../STORAGE/", repositoryId.ToString()); // Actualiza el path según sea necesario
+        var storagePath = Path.Combine("./STORAGE/", repositoryName); // Actualiza el path según sea necesario
 
         // Verificar y crear el directorio si no existe
         if (!Directory.Exists(storagePath))
@@ -65,13 +64,13 @@ public class CommitsController : ControllerBase
                 await file.CopyToAsync(stream);
             }
 
-            var existingFile = _context.Files.FirstOrDefault(f => f.RepositoryId == repositoryId && f.FilePath == filePath);
+            var existingFile = _context.Files.FirstOrDefault(f => f.RepositoryId == repository.Id && f.FilePath == filePath);
 
             if (existingFile == null)
             {
                 var newFile = new File
                 {
-                    RepositoryId = repositoryId,
+                    RepositoryId = repository.Id,
                     FilePath = filePath,
                     CreatedAt = DateTime.UtcNow
                 };

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MySql.EntityFrameworkCore;
 using MySql.Data.EntityFramework;
 using Microsoft.OpenApi.Models;
+
 public class Startup
 {
     public IConfiguration Configuration { get; }

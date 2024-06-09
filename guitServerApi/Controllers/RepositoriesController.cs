@@ -79,7 +79,7 @@ public class RepositoriesController : ControllerBase
             return NotFound("Repository not found.");
         }
 
-        var directoryPath = "/path/to/directory"; // Actualiza este valor según sea necesario
+        var directoryPath = "./STORAGE/"; 
         var filesToAdd = new List<string>();
 
         if (request.AddAll)
