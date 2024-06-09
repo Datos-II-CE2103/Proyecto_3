@@ -1,3 +1,4 @@
+using System.Reflection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MySql.EntityFrameworkCore;
@@ -28,11 +29,15 @@ public class Startup
         services.AddDbContext<VersionControlContext>(options =>
             options.UseMySQL(Configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddControllers();
+        services.AddControllers().AddNewtonsoftJson(options =>
+        {
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+        });
 
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Version Control API", Version = "v1" });
+            c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
         });
     }
 
@@ -44,7 +49,10 @@ public class Startup
         }
 
         app.UseSwagger();
-        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Version Control API v1"));
+        app.UseSwaggerUI(c =>
+        {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "Version Control API v1");
+        });
 
         app.UseRouting();
         app.UseEndpoints(endpoints =>
@@ -53,4 +61,3 @@ public class Startup
         });
     }
 }
-
