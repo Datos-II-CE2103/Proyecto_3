@@ -1,0 +1,3 @@
+/home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles/GuitClient.dir
+/home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
