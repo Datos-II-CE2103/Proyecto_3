@@ -6,7 +6,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(cpprestsdk REQUIRED)
 find_package(Boost)
-add_executable(GuitClient main.cpp)
+add_executable(GuitClient main.cpp
+        Commands/Command.cpp
+        Commands/Command.h
+        Commands/InitCommand.cpp
+        Commands/InitCommand.h)
 
 
 target_link_libraries(GuitClient cpprestsdk::cpprestsdk)
