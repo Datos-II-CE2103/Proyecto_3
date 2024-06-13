@@ -10,7 +10,11 @@ add_executable(GuitClient main.cpp
         Commands/Command.cpp
         Commands/Command.h
         Commands/InitCommand.cpp
-        Commands/InitCommand.h)
+        Commands/InitCommand.h
+        Managers/NetworkManager.cpp
+        Managers/NetworkManager.h
+        Data_Structures/FileStatus.cpp
+        Data_Structures/FileStatus.h)
 
 
 target_link_libraries(GuitClient cpprestsdk::cpprestsdk)

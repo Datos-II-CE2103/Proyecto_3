@@ -1,8 +1,12 @@
 #include <cpprest/http_client.h> // Incluimos la cabecera para el cliente REST
 #include <fstream>
 #include <filesystem>
+#include <cstdlib>
 
 int main() {
+
+    system("gnome-terminal");
+
     std::string nombre; // Nombre proporcionado por el usuario
     std::cout << "Ingrese el nombre: ";
     std::cin >> nombre;
