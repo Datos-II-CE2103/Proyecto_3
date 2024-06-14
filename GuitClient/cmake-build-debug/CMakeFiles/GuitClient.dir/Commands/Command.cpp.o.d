@@ -1003,4 +1003,6 @@ CMakeFiles/GuitClient.dir/Commands/Command.cpp.o: \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/write_op.hpp \
  /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/filestream.h \
  /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/details/fileio.h \
- /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.h
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.h \
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitReset.h \
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitHelp.h

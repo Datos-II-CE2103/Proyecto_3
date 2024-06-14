@@ -50,3 +50,9 @@ std::string getRepositoryId()
     configFile.close();
     return repositoryId;
 }
+size_t WriteCallback(void* ptr, size_t size, size_t nmemb, void* stream)
+{
+    std::ofstream* out = static_cast<std::ofstream*>(stream);
+    out->write(static_cast<const char*>(ptr), size * nmemb);
+    return size * nmemb;
+}

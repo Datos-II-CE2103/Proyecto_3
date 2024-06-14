@@ -24,6 +24,49 @@ public class CommitsController : ControllerBase
     }
 
     
+    // Nuevo endpoint para el reset
+    [HttpGet("api/Commits/{repositoryId}/reset")]
+    public IActionResult ResetFile(string repositoryId, string filename)
+    {
+        try
+        {
+            // Obtener el archivo especificado por el repositorio y nombre de archivo
+            var repository = _context.Repositories.FirstOrDefault(r => r.Id.ToString() == repositoryId);
+            if (repository == null)
+            {
+                return NotFound("Repository not found.");
+            }
+
+            var file = _context.Files.FirstOrDefault(f => f.RepositoryId == repository.Id && f.FilePath.EndsWith(filename));
+            if (file == null)
+            {
+                return NotFound("File not found.");
+            }
+
+            // Obtener el último commit aplicado al archivo 
+            var latestCommit = _context.FileDeltas
+                .Where(fd => fd.FileId == file.Id)
+                .OrderByDescending(fd => fd.CreatedAt)
+                .FirstOrDefault();
+
+            if (latestCommit == null)
+            {
+                return NotFound("No se encontraron commits para este archivo");
+            }
+
+            // Reconstruir el contenido del archivo a partir del último commit
+            string fileContent = ReconstructFileContent(new List<FileDelta> { latestCommit });
+
+            // Retornar el archivo resultante
+            return File(Encoding.UTF8.GetBytes(fileContent), "application/octet-stream", filename);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+        }
+    }
+    
+    
     public static string GenerateMD5Hash(string input)
     {
         using (var md5 = MD5.Create())

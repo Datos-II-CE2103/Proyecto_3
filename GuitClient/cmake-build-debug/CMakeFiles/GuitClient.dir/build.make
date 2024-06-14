@@ -237,6 +237,34 @@ CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.cpp -o CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.s
 
+CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o: CMakeFiles/GuitClient.dir/flags.make
+CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitReset.cpp
+CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o: CMakeFiles/GuitClient.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o -MF CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o.d -o CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o -c /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitReset.cpp
+
+CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitReset.cpp > CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.i
+
+CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitReset.cpp -o CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.s
+
+CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o: CMakeFiles/GuitClient.dir/flags.make
+CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitHelp.cpp
+CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o: CMakeFiles/GuitClient.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o -MF CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o.d -o CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o -c /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitHelp.cpp
+
+CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitHelp.cpp > CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.i
+
+CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitHelp.cpp -o CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.s
+
 # Object files for target GuitClient
 GuitClient_OBJECTS = \
 "CMakeFiles/GuitClient.dir/main.cpp.o" \
@@ -250,7 +278,9 @@ GuitClient_OBJECTS = \
 "CMakeFiles/GuitClient.dir/Commands/lsCommand.cpp.o" \
 "CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o" \
 "CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.o" \
-"CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.o"
+"CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.o" \
+"CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o" \
+"CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o"
 
 # External object files for target GuitClient
 GuitClient_EXTERNAL_OBJECTS =
@@ -267,6 +297,8 @@ GuitClient: CMakeFiles/GuitClient.dir/Commands/lsCommand.cpp.o
 GuitClient: CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o
 GuitClient: CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.o
 GuitClient: CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.o
+GuitClient: CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o
+GuitClient: CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o
 GuitClient: CMakeFiles/GuitClient.dir/build.make
 GuitClient: /home/alex/.conan2/p/b/cppre392ba417172d2/p/lib/libcpprest.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_log_setup.a
@@ -317,7 +349,7 @@ GuitClient: /home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/libssl.a
 GuitClient: /home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/libcrypto.a
 GuitClient: /home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib/libz.a
 GuitClient: CMakeFiles/GuitClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable GuitClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable GuitClient"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GuitClient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

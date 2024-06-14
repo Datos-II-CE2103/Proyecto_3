@@ -225,6 +225,54 @@ Commands/guitCommit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.s
 .PHONY : Commands/guitCommit.cpp.s
 
+Commands/guitHelp.o: Commands/guitHelp.cpp.o
+.PHONY : Commands/guitHelp.o
+
+# target to build an object file
+Commands/guitHelp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.o
+.PHONY : Commands/guitHelp.cpp.o
+
+Commands/guitHelp.i: Commands/guitHelp.cpp.i
+.PHONY : Commands/guitHelp.i
+
+# target to preprocess a source file
+Commands/guitHelp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.i
+.PHONY : Commands/guitHelp.cpp.i
+
+Commands/guitHelp.s: Commands/guitHelp.cpp.s
+.PHONY : Commands/guitHelp.s
+
+# target to generate assembly for a file
+Commands/guitHelp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitHelp.cpp.s
+.PHONY : Commands/guitHelp.cpp.s
+
+Commands/guitReset.o: Commands/guitReset.cpp.o
+.PHONY : Commands/guitReset.o
+
+# target to build an object file
+Commands/guitReset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.o
+.PHONY : Commands/guitReset.cpp.o
+
+Commands/guitReset.i: Commands/guitReset.cpp.i
+.PHONY : Commands/guitReset.i
+
+# target to preprocess a source file
+Commands/guitReset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.i
+.PHONY : Commands/guitReset.cpp.i
+
+Commands/guitReset.s: Commands/guitReset.cpp.s
+.PHONY : Commands/guitReset.s
+
+# target to generate assembly for a file
+Commands/guitReset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitReset.cpp.s
+.PHONY : Commands/guitReset.cpp.s
+
 Commands/guitRollBack.o: Commands/guitRollBack.cpp.o
 .PHONY : Commands/guitRollBack.o
 
@@ -438,6 +486,12 @@ help:
 	@echo "... Commands/guitCommit.o"
 	@echo "... Commands/guitCommit.i"
 	@echo "... Commands/guitCommit.s"
+	@echo "... Commands/guitHelp.o"
+	@echo "... Commands/guitHelp.i"
+	@echo "... Commands/guitHelp.s"
+	@echo "... Commands/guitReset.o"
+	@echo "... Commands/guitReset.i"
+	@echo "... Commands/guitReset.s"
 	@echo "... Commands/guitRollBack.o"
 	@echo "... Commands/guitRollBack.i"
 	@echo "... Commands/guitRollBack.s"
