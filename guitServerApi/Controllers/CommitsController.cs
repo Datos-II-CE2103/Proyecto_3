@@ -2,10 +2,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
+using IOFile = System.IO.File;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DiffMatchPatch;
+using Microsoft.EntityFrameworkCore;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -18,94 +20,135 @@ public class CommitsController : ControllerBase
         _context = context;
     }
 
-    [HttpPost("{repositoryName}/commit")]
+    [HttpPost("{repositoryId}/commit")]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<IActionResult> CommitChanges(string repositoryName, [FromForm] string message, [FromForm] List<IFormFile> files)
+    public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] string message, [FromForm] List<IFormFile> files, [FromForm] List<string> filePaths)
     {
-        var repository = _context.Repositories.FirstOrDefault(r => r.Name == repositoryName);
+        var repository = await _context.Repositories.FirstOrDefaultAsync(r => r.Id == repositoryId);
+
         if (repository == null)
         {
             return NotFound("Repository not found.");
         }
 
-        var commit = new Commit
+        using (var transaction = await _context.Database.BeginTransactionAsync())
         {
-            RepositoryId = repository.Id,
-            CommitHash = Guid.NewGuid().ToString(), // Generar un hash de commit único
-            Message = message,
-            CreatedAt = DateTime.UtcNow
-        };
-
-        _context.Commits.Add(commit);
-        _context.SaveChanges();
-
-        var storagePath = Path.Combine("/.STORAGE/", repositoryName); // Actualiza el path según sea necesario
-
-        // Verificar y crear el directorio si no existe
-        if (!Directory.Exists(storagePath))
-        {
-            Directory.CreateDirectory(storagePath);
-        }
-
-        var dmp = new diff_match_patch();
-
-        foreach (var file in files)
-        {
-            var filePath = Path.Combine(storagePath, file.FileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            try
             {
-                await file.CopyToAsync(stream);
-            }
-
-            var existingFile = _context.Files.FirstOrDefault(f => f.RepositoryId == repository.Id && f.FilePath == filePath);
-
-            if (existingFile == null)
-            {
-                var newFile = new File
+                var commit = new Commit
                 {
                     RepositoryId = repository.Id,
-                    FilePath = filePath,
+                    CommitHash = Guid.NewGuid().ToString(),
+                    Message = message,
                     CreatedAt = DateTime.UtcNow
                 };
 
-                _context.Files.Add(newFile);
-                _context.SaveChanges();
+                _context.Commits.Add(commit);
+                await _context.SaveChangesAsync();
 
-                var fileDelta = new FileDelta
+                var storageBasePath = Path.Combine("../.STORAGE/", $"{repository.Id}.{repository.Name}");
+
+                if (!Directory.Exists(storageBasePath))
                 {
-                    FileId = newFile.Id,
-                    CommitId = commit.Id,
-                    Delta = Encoding.UTF8.GetBytes(System.IO.File.ReadAllText(filePath)), // Almacenar el contenido completo como delta inicial
-                    CreatedAt = DateTime.UtcNow
-                };
+                    Directory.CreateDirectory(storageBasePath);
+                }
 
-                _context.FileDeltas.Add(fileDelta);
+                for (int i = 0; i < files.Count; i++)
+                {
+                    var file = files[i];
+                    var relativePath = filePaths[i];
+
+                    var filePath = Path.Combine(storageBasePath, relativePath);
+
+                    var directoryPath = Path.GetDirectoryName(filePath);
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
+
+                    var existingFile = _context.Files.FirstOrDefault(f => f.RepositoryId == repositoryId && f.FilePath == filePath);
+
+                    string newContent;
+                    using (var reader = new StreamReader(file.OpenReadStream()))
+                    {
+                        newContent = await reader.ReadToEndAsync();
+                    }
+
+                    bool isModified = false;
+
+                    if (existingFile == null)
+                    {
+                        var newFile = new File
+                        {
+                            RepositoryId = repositoryId,
+                            FilePath = filePath,
+                            CreatedAt = DateTime.UtcNow
+                        };
+
+                        _context.Files.Add(newFile);
+                        await _context.SaveChangesAsync();
+
+                        var fileDelta = new FileDelta
+                        {
+                            FileId = newFile.Id,
+                            CommitId = commit.Id,
+                            Delta = Encoding.UTF8.GetBytes(newContent),
+                            CreatedAt = DateTime.UtcNow
+                        };
+
+                        _context.FileDeltas.Add(fileDelta);
+                        isModified = true;
+                    }
+                    else
+                    {
+                        string previousContent = System.IO.File.Exists(filePath) ? System.IO.File.ReadAllText(filePath) : string.Empty;
+
+                        if (previousContent != newContent)
+                        {
+                            var dmp = new diff_match_patch();
+                            var diffs = dmp.diff_main(previousContent, newContent);
+                            dmp.diff_cleanupSemantic(diffs);
+
+                            var delta = dmp.diff_toDelta(diffs);
+
+                            var fileDelta = new FileDelta
+                            {
+                                FileId = existingFile.Id,
+                                CommitId = commit.Id,
+                                Delta = Encoding.UTF8.GetBytes(delta),
+                                CreatedAt = DateTime.UtcNow
+                            };
+
+                            _context.FileDeltas.Add(fileDelta);
+                            isModified = true;
+                        }
+                    }
+
+                    if (isModified)
+                    {
+                        System.IO.File.WriteAllText(filePath, newContent);
+                    }
+                }
+
+                await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+                return CreatedAtAction(nameof(GetCommit), new { id = commit.Id }, commit);
             }
-            else
+            catch (Exception ex)
             {
-                var previousContent = Encoding.UTF8.GetString(GetPreviousFileContent(existingFile.Id));
-                var newContent = System.IO.File.ReadAllText(filePath);
-                var diffs = dmp.diff_main(previousContent, newContent);
-                dmp.diff_cleanupSemantic(diffs);
-                var delta = diffsToString(diffs);
-
-                var fileDelta = new FileDelta
-                {
-                    FileId = existingFile.Id,
-                    CommitId = commit.Id,
-                    Delta = Encoding.UTF8.GetBytes(delta), // Almacenar solo los cambios
-                    CreatedAt = DateTime.UtcNow
-                };
-
-                _context.FileDeltas.Add(fileDelta);
+                await transaction.RollbackAsync();
+                Console.WriteLine($"Error: {ex.Message}");
+                throw;
             }
         }
+    }
 
-        _context.SaveChanges();
-
-        return CreatedAtAction(nameof(GetCommit), new { id = commit.Id }, commit);
+    private string GetPreviousFilePath(int fileId)
+    {
+        var previousFile = _context.Files.FirstOrDefault(f => f.Id == fileId);
+        return previousFile?.FilePath;
     }
 
     [HttpGet("{id}")]
@@ -233,6 +276,8 @@ public class CommitsController : ControllerBase
         var result = new StringBuilder();
         foreach (var diff in diffs)
         {
+            if (diff.operation == null) continue;
+
             result.Append(diff.operation.ToString()).Append(": ").Append(diff.text).AppendLine();
         }
         return result.ToString();
@@ -240,23 +285,29 @@ public class CommitsController : ControllerBase
 
     private List<Diff> stringToDiffs(string deltaText)
     {
-        var dmp = new diff_match_patch();
         var diffs = new List<Diff>();
         var lines = deltaText.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
         foreach (var line in lines)
         {
-            if (string.IsNullOrWhiteSpace(line))
-                continue;
+            if (string.IsNullOrWhiteSpace(line)) continue;
 
             var parts = line.Split(new[] { ": " }, 2, StringSplitOptions.None);
+
             if (parts.Length != 2)
-                continue;
+            {
+                throw new FormatException("Formato de diffs incorrecto. Se esperaba 'Operation: Text'");
+            }
 
-            var operation = (Operation)Enum.Parse(typeof(Operation), parts[0]);
+            if (!Enum.TryParse<Operation>(parts[0], true, out var operation))
+            {
+                throw new ArgumentException($"Valor de operación no válido: {parts[0]}.");
+            }
+
             var text = parts[1];
-
             diffs.Add(new Diff(operation, text));
         }
+
         return diffs;
     }
 }

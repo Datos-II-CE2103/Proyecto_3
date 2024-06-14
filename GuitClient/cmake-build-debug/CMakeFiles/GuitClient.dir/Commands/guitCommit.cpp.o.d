@@ -996,6 +996,8 @@ CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o: \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/../Data_Structures/listaEnlazada.h \
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/../Data_Structures/FileStatus.h \
  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curl.h \
  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curlver.h \
  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/system.h \

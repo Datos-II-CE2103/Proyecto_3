@@ -2195,6 +2195,18 @@ CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o: /mnt/c/Users/amv22/Dev/Proy
   /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/pplx/pplxinterface.h \
   /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/pplx/pplxlinux.h \
   /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/pplx/pplxtasks.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curl.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curlver.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/easy.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/header.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/mprintf.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/multi.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/options.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/system.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/urlapi.h \
+  /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/websockets.h \
+  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/FileStatus.h \
+  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/listaEnlazada.h \
   /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/DirectoryManager.h \
   /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/NetworkManager.h \
   /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.h \
@@ -4757,6 +4769,12 @@ CMakeFiles/GuitClient.dir/main.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClie
 
 /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/lsCommand.cpp:
 
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/urlapi.h:
+
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/mprintf.h:
+
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curlver.h:
+
 /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
@@ -5265,6 +5283,8 @@ CMakeFiles/GuitClient.dir/main.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClie
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/preprocessor/inc.hpp:
 
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/easy.h:
+
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/preprocessor/identity.hpp:
@@ -5729,6 +5749,8 @@ CMakeFiles/GuitClient.dir/main.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClie
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/detail/type_traits.hpp:
 
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/websockets.h:
+
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/execution/detail/bulk_sender.hpp:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/numeric/conversion/detail/int_float_mixture.hpp:
@@ -5791,7 +5813,11 @@ CMakeFiles/GuitClient.dir/main.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClie
 
 /usr/include/c++/13/bits/fs_dir.h:
 
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/multi.h:
+
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/detail/buffer_sequence_adapter.hpp:
+
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/system.h:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/traits/submit_free.hpp:
 
@@ -6167,6 +6193,8 @@ CMakeFiles/GuitClient.dir/main.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClie
 
 /usr/include/c++/13/bits/new_allocator.h:
 
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curl.h:
+
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/detail/assert.hpp:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/smart_ptr/detail/spinlock.hpp:
@@ -6344,6 +6372,8 @@ CMakeFiles/GuitClient.dir/main.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClie
 /usr/include/c++/13/bits/localefwd.h:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/config/detail/select_stdlib_config.hpp:
+
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/header.h:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/detail/winsock_init.hpp:
 
@@ -6626,6 +6656,8 @@ CMakeFiles/GuitClient.dir/main.cpp.o: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClie
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/detail/epoll_reactor.hpp:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/traits/set_value_free.hpp:
+
+/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/options.h:
 
 /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/verify_mode.hpp:
 

@@ -2199,6 +2199,18 @@ CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o
  /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/pplx/pplxinterface.h
  /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/pplx/pplxlinux.h
  /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/pplx/pplxtasks.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curl.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curlver.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/easy.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/header.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/mprintf.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/multi.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/options.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/system.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/urlapi.h
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/websockets.h
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/FileStatus.h
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/listaEnlazada.h
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/DirectoryManager.h
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/NetworkManager.h
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.h

@@ -1,6 +1,6 @@
 # Instituto Tecnológico de Costa Rica
 
-## Proyecto 3 - Guit
+## Proyecto 3 - Guit Repo
 
 ### Algoritmos y Estructuras de Datos II (CE2103)
 
