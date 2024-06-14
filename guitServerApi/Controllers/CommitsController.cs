@@ -96,35 +96,63 @@ public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] stri
                 bool isModified = false;
 
                 
-                if (existingFile == null)
-                {
-                    var newFile = new File { RepositoryId = repositoryId, FilePath = filePath, CreatedAt = DateTime.UtcNow };
-                    _context.Files.Add(newFile);
-                    await _context.SaveChangesAsync();
-                    var fileDelta = new FileDelta { FileId = newFile.Id, CommitId = commit.Id, Delta = Encoding.UTF8.GetBytes(newContent), CreatedAt = DateTime.UtcNow };
-                    _context.FileDeltas.Add(fileDelta);
-                    isModified = true;
-                    System.IO.File.WriteAllText(filePath, newContent);
+                if (existingFile == null) 
+                { 
+                    var newFile = new File 
+                    { 
+                        RepositoryId = repositoryId, 
+                        FilePath = filePath, 
+                        CreatedAt = DateTime.UtcNow 
+                    }; 
+                    _context.Files.Add(newFile); 
+                    await _context.SaveChangesAsync(); 
+    
+                    // Generar un parche inicial con el contenido completo del archivo
+                    var dmp = new diff_match_patch();
+                    var diffs = dmp.diff_main(string.Empty, newContent);
+                    dmp.diff_cleanupSemantic(diffs);
+                    var patches = dmp.patch_make(string.Empty, diffs);
+                    var patchText = dmp.patch_toText(patches);
+    
+                    var fileDelta = new FileDelta 
+                    { 
+                        FileId = newFile.Id, 
+                        CommitId = commit.Id, 
+                        Delta = Encoding.UTF8.GetBytes(patchText),
+                        CreatedAt = DateTime.UtcNow 
+                    }; 
+                    _context.FileDeltas.Add(fileDelta); 
+                    isModified = true; 
+                    System.IO.File.WriteAllText(filePath, newContent); 
+                } 
+                else 
+                { 
+                    string previousContent = System.IO.File.Exists(filePath) ? System.IO.File.ReadAllText(filePath) : string.Empty; 
+                    if (previousContent != newContent) 
+                    { 
+                        var dmp = new diff_match_patch(); 
+                        var diffs = dmp.diff_main(previousContent, newContent); 
+                        dmp.diff_cleanupSemantic(diffs); 
+        
+                        // Generar parches a partir de las diferencias
+                        var patches = dmp.patch_make(previousContent, diffs); 
+                        var patchText = dmp.patch_toText(patches); 
+        
+                        var fileDelta = new FileDelta 
+                        { 
+                            FileId = existingFile.Id, 
+                            CommitId = commit.Id, 
+                            Delta = Encoding.UTF8.GetBytes(patchText), 
+                            CreatedAt = DateTime.UtcNow 
+                        }; 
+                        _context.FileDeltas.Add(fileDelta); 
+                        isModified = true; 
+        
+                        // Aplicar parches al contenido anterior para obtener el nuevo contenido
+                        var result = dmp.patch_apply(patches, previousContent); 
+                        System.IO.File.WriteAllText(filePath, result[0].ToString()); 
+                    } 
                 }
-                else
-                {
-                    string previousContent = System.IO.File.Exists(filePath) ? System.IO.File.ReadAllText(filePath) : string.Empty;
-                    if (previousContent != newContent)
-                    {
-                        var dmp = new diff_match_patch();
-                        var diffs = dmp.diff_main(previousContent, newContent);
-                        dmp.diff_cleanupSemantic(diffs);
-                        var delta = dmp.diff_toDelta(diffs);
-                        var fileDelta = new FileDelta { FileId = existingFile.Id, CommitId = commit.Id, Delta = Encoding.UTF8.GetBytes(delta), CreatedAt = DateTime.UtcNow };
-                        _context.FileDeltas.Add(fileDelta);
-                        isModified = true;
-                        var patches = dmp.patch_make(previousContent, diffs);
-                        var result = dmp.patch_apply(patches, previousContent);
-                        System.IO.File.WriteAllText(filePath, result[0].ToString());
-                    }
-                }
-                
-
                 if (isModified)
                 {
                     await _context.SaveChangesAsync();
@@ -193,7 +221,7 @@ public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] stri
         var fileContent = ReconstructFileContent(fileDeltas);
 
         // Construir el path completo utilizando el formato id.name y filename
-        string fullPath = $"{repositoryId}.{repository.Name}/{filename}";
+        string fullPath = $"{filename}";
 
         return File(Encoding.UTF8.GetBytes(fileContent), "application/octet-stream", fullPath);
     }
@@ -203,22 +231,20 @@ public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] stri
         var dmp = new diff_match_patch();
         string reconstructedContent = string.Empty;
 
-        foreach (var delta in deltas) {
+        foreach (var delta in deltas)
+        {
             string deltaString = Encoding.UTF8.GetString(delta.Delta);
-            Console.WriteLine($"Patch String: {deltaString}");
-            try {
+            if (dmp.patch_fromText(deltaString).Count > 0) // Verifica si es un parche válido
+            {
                 var patches = dmp.patch_fromText(deltaString);
-                if (patches.Count > 0) {
-                    var result = dmp.patch_apply(patches, reconstructedContent);
-                    reconstructedContent = result[0].ToString();
-                } else {
-                    Console.WriteLine($"No valid patches found in delta string: {deltaString}");
-                }
-            } catch (ArgumentException ex) {
-                Console.WriteLine($"Invalid patch string: {deltaString}. Error: {ex.Message}");
+                var result = dmp.patch_apply(patches, reconstructedContent);
+                reconstructedContent = result[0].ToString();
+            }
+            else
+            {
+                Console.WriteLine($"Invalid patch string: {deltaString}");
             }
         }
-        
 
         return reconstructedContent;
     }
