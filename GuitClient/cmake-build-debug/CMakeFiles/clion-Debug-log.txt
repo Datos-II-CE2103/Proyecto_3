@@ -1,0 +1,216 @@
+C:\Windows\system32\wsl.exe --distribution Ubuntu-24.04 --exec "/mnt/c/Program Files/JetBrains/CLion 2024.1.1/bin/ttyfix" /bin/bash -c "export CLION_IDE=TRUE && export CMAKE_COLOR_DIAGNOSTICS=ON && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient -B /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug"
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+-- CMake-Conan: first find_package() found. Installing dependencies with Conan
+-- CMake-Conan: Checking if a default profile exists
+/home/alex/.conan2/profiles/default
+-- CMake-Conan: cmake_system_name=Linux
+-- CMake-Conan: cmake_system_processor=x86_64
+-- CMake-Conan: CMake compiler=GNU
+-- CMake-Conan: CMake compiler version=13.2.0
+-- CMake-Conan: [settings] compiler=gcc
+-- CMake-Conan: [settings] compiler.version=13
+-- CMake-Conan: Creating profile /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan_host_profile
+-- CMake-Conan: Profile: 
+[settings]
+arch=x86_64
+os=Linux
+compiler=gcc
+compiler.version=13
+compiler.cppstd=17
+compiler.libcxx=libstdc++11
+build_type=Debug
+[conf]
+tools.cmake.cmaketoolchain:generator=Unix Makefiles
+tools.build:compiler_executables={"c":"/usr/bin/cc","cpp":"/usr/bin/c++"}
+
+-- CMake-Conan: Installing single configuration Debug
+-- CMake-Conan: conan install /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient -of=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan --profile:host=default;--profile:host=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan_host_profile;--profile:build=default;--build=missing
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Debug
+compiler=gcc
+compiler.cppstd=17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+[conf]
+tools.build:compiler_executables={'c': '/usr/bin/cc', 'cpp': '/usr/bin/c++'}
+tools.cmake.cmaketoolchain:generator=Unix Makefiles
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=13
+os=Linux
+
+
+======== Computing dependency graph ========
+Graph root
+    conanfile.py: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/conanfile.py
+Requirements
+    boost/1.83.0#f9d7f54f9095af0977b068c5e1164748 - Cache
+    bzip2/1.0.8#457c272f7da34cb9c67456dd217d36c4 - Cache
+    cpprestsdk/2.10.19#fc44e90f5159be5817ef170cc46961b3 - Cache
+    libbacktrace/cci.20210118#ec1aa63bbc10145c6a299e68e711670c - Cache
+    libcurl/8.8.0#9170903d66d6f6e6795fbb566a403129 - Cache
+    openssl/3.2.2#899583c694f9deccec74dbe0bbc65a15 - Cache
+    websocketpp/0.8.2#842a0419153a8aa52f3ea3a1da557d38 - Cache
+    zlib/1.3.1#f52e03ae3d251dec704634230cd806a2 - Cache
+Build requirements
+    autoconf/2.71#f9307992909d7fb3df459340f1932809 - Cache
+    automake/1.16.5#058bda3e21c36c9aa8425daf3c1faf50 - Cache
+    b2/4.10.1#a41eecb267963ddf518e3c177eae60e1 - Cache
+    gnu-config/cci.20210814#dc430d754f465e8c74463019672fb97b - Cache
+    libtool/2.4.7#08316dad5c72c541ed21e039e4cf217b - Cache
+    m4/1.4.19#b38ced39a01e31fef5435bc634461fd2 - Cache
+    meson/1.2.2#04bdfb85d665c82b08a3510aee3ffd19 - Cache
+    ninja/1.11.1#77587f8c8318662ac8e5a7867eb4be21 - Cache
+    pkgconf/2.1.0#27f44583701117b571307cf5b5fe5605 - Cache
+Resolved version ranges
+    openssl/[>=1.1 <4]: openssl/3.2.2
+    zlib/[>=1.2.11 <2]: zlib/1.3.1
+
+======== Computing necessary packages ========
+Requirements
+    boost/1.83.0#f9d7f54f9095af0977b068c5e1164748:1ae0c38f94264681a756badd710deca8dda0939f#5b719b3608996ea48212b4e271bfbf05 - Cache
+    bzip2/1.0.8#457c272f7da34cb9c67456dd217d36c4:f658a7d5064609a1016f930e03b14f656c1975b8#c98e3fe57f3ba943749467d3c732f4ec - Cache
+    cpprestsdk/2.10.19#fc44e90f5159be5817ef170cc46961b3:f72f0bf52ddf92c3ac8108599455bc7e5c657381#08c73cb1978af484bd11169eadf94315 - Cache
+    libbacktrace/cci.20210118#ec1aa63bbc10145c6a299e68e711670c:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#e522b2cda55cbec4255ec52875d1fecd - Cache
+    libcurl/8.8.0#9170903d66d6f6e6795fbb566a403129:3b8f43bb1ada3c8e2c1f1305688a6bda59ef87d8#14268924cae26818ccf11c57073657b4 - Cache
+    openssl/3.2.2#899583c694f9deccec74dbe0bbc65a15:d2f92b60661cceae349d2ba130929587698dab48#ad23303cf6d827e6b4a8f226657b88f4 - Cache
+    websocketpp/0.8.2#842a0419153a8aa52f3ea3a1da557d38:da39a3ee5e6b4b0d3255bfef95601890afd80709#8d95ef6d4cbb83d2ac764b984accfa53 - Cache
+    zlib/1.3.1#f52e03ae3d251dec704634230cd806a2:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#74a2d9166eff65b3b993ea25dde8d818 - Cache
+Build requirements
+Skipped binaries
+    autoconf/2.71, automake/1.16.5, b2/4.10.1, gnu-config/cci.20210814, libtool/2.4.7, m4/1.4.19, meson/1.2.2, ninja/1.11.1, pkgconf/2.1.0
+
+======== Installing packages ========
+bzip2/1.0.8: Already installed! (1 of 8)
+libbacktrace/cci.20210118: Already installed! (2 of 8)
+zlib/1.3.1: Already installed! (3 of 8)
+boost/1.83.0: Already installed! (4 of 8)
+openssl/3.2.2: Already installed! (5 of 8)
+websocketpp/0.8.2: Already installed! (6 of 8)
+libcurl/8.8.0: Already installed! (7 of 8)
+cpprestsdk/2.10.19: Already installed! (8 of 8)
+WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
+WARN: deprecated:     'cpp_info.names' used in: boost/1.83.0, openssl/3.2.2, bzip2/1.0.8, libcurl/8.8.0, zlib/1.3.1
+WARN: deprecated:     'cpp_info.build_modules' used in: openssl/3.2.2, bzip2/1.0.8
+WARN: deprecated:     'env_info' used in: openssl/3.2.2, boost/1.83.0, bzip2/1.0.8
+WARN: deprecated:     'cpp_info.filenames' used in: boost/1.83.0
+WARN: deprecated:     'user_info' used in: boost/1.83.0
+
+======== Finalizing install (deploy, generators) ========
+conanfile.py: Writing generators to /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
+conanfile.py: Generator 'CMakeDeps' calling 'generate()'
+conanfile.py: CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(CURL)
+    find_package(cpprestsdk)
+    find_package(Boost)
+    target_link_libraries(... CURL::libcurl cpprestsdk::cpprestsdk boost::boost)
+conanfile.py: Calling generate()
+conanfile.py: Generators folder: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
+conanfile.py: CMakeToolchain generated: conan_toolchain.cmake
+conanfile.py: CMakeToolchain: Preset 'conan-debug' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-debug
+    (cmake<3.23) cmake <path> -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=generators/conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_BUILD_TYPE=Debug
+conanfile.py: CMakeToolchain generated: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CMakePresets.json
+conanfile.py: Generating aggregated env files
+conanfile.py: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+Install finished successfully
+-- CMake-Conan: CONAN_GENERATORS_FOLDER=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
+-- CMake-Conan: CONANFILE=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/conanfile.py
+-- Conan: Component target declared 'cpprestsdk::cpprestsdk_boost_internal'
+-- Conan: Component target declared 'cpprestsdk::cpprestsdk_openssl_internal'
+-- Conan: Component target declared 'cpprestsdk::cpprestsdk_zlib_internal'
+-- Conan: Component target declared 'cpprestsdk::cpprestsdk_websocketpp_internal'
+-- Conan: Component target declared 'cpprestsdk::cpprest'
+-- Conan: Target declared 'cpprestsdk::cpprestsdk'
+-- CMake-Conan: find_package(websocketpp) found, 'conan install' already ran
+-- Conan: Target declared 'websocketpp::websocketpp'
+-- CMake-Conan: find_package(OpenSSL) found, 'conan install' already ran
+-- Conan: Component target declared 'OpenSSL::Crypto'
+-- Conan: Component target declared 'OpenSSL::SSL'
+-- Conan: Target declared 'openssl::openssl'
+-- CMake-Conan: find_package(ZLIB) found, 'conan install' already ran
+-- Conan: Target declared 'ZLIB::ZLIB'
+-- Conan: Including build module from '/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/cmake/conan-official-openssl-variables.cmake'
+-- CMake-Conan: find_package(Boost) found, 'conan install' already ran
+-- Conan: Component target declared 'Boost::diagnostic_definitions'
+-- Conan: Component target declared 'Boost::disable_autolinking'
+-- Conan: Component target declared 'Boost::dynamic_linking'
+-- Conan: Component target declared 'Boost::headers'
+-- Conan: Component target declared 'Boost::boost'
+-- Conan: Component target declared 'boost::_libboost'
+-- Conan: Component target declared 'Boost::atomic'
+-- Conan: Component target declared 'Boost::container'
+-- Conan: Component target declared 'Boost::context'
+-- Conan: Component target declared 'Boost::date_time'
+-- Conan: Component target declared 'Boost::exception'
+-- Conan: Component target declared 'Boost::math'
+-- Conan: Component target declared 'Boost::math_c99'
+-- Conan: Component target declared 'Boost::math_c99f'
+-- Conan: Component target declared 'Boost::math_c99l'
+-- Conan: Component target declared 'Boost::math_tr1'
+-- Conan: Component target declared 'Boost::math_tr1f'
+-- Conan: Component target declared 'Boost::math_tr1l'
+-- Conan: Component target declared 'Boost::program_options'
+-- Conan: Component target declared 'Boost::regex'
+-- Conan: Component target declared 'Boost::serialization'
+-- Conan: Component target declared 'Boost::stacktrace'
+-- Conan: Component target declared 'Boost::stacktrace_addr2line'
+-- Conan: Component target declared 'Boost::stacktrace_backtrace'
+-- Conan: Component target declared 'Boost::stacktrace_basic'
+-- Conan: Component target declared 'Boost::stacktrace_noop'
+-- Conan: Component target declared 'Boost::system'
+-- Conan: Component target declared 'Boost::test'
+-- Conan: Component target declared 'Boost::test_exec_monitor'
+-- Conan: Component target declared 'Boost::timer'
+-- Conan: Component target declared 'Boost::url'
+-- Conan: Component target declared 'Boost::wserialization'
+-- Conan: Component target declared 'Boost::chrono'
+-- Conan: Component target declared 'Boost::coroutine'
+-- Conan: Component target declared 'Boost::filesystem'
+-- Conan: Component target declared 'Boost::json'
+-- Conan: Component target declared 'Boost::nowide'
+-- Conan: Component target declared 'Boost::prg_exec_monitor'
+-- Conan: Component target declared 'Boost::random'
+-- Conan: Component target declared 'Boost::thread'
+-- Conan: Component target declared 'Boost::type_erasure'
+-- Conan: Component target declared 'Boost::unit_test_framework'
+-- Conan: Component target declared 'Boost::wave'
+-- Conan: Component target declared 'Boost::contract'
+-- Conan: Component target declared 'Boost::fiber'
+-- Conan: Component target declared 'Boost::fiber_numa'
+-- Conan: Component target declared 'Boost::graph'
+-- Conan: Component target declared 'Boost::iostreams'
+-- Conan: Component target declared 'Boost::locale'
+-- Conan: Component target declared 'Boost::log'
+-- Conan: Component target declared 'Boost::log_setup'
+-- Conan: Target declared 'boost::boost'
+-- CMake-Conan: find_package(BZip2) found, 'conan install' already ran
+-- Conan: Target declared 'BZip2::BZip2'
+-- Conan: Including build module from '/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib/cmake/conan-official-bzip2-variables.cmake'
+-- CMake-Conan: find_package(libbacktrace) found, 'conan install' already ran
+-- Conan: Target declared 'libbacktrace::libbacktrace'
+-- CMake-Conan: find_package(Boost) found, 'conan install' already ran
+-- CMake-Conan: find_package(CURL) found, 'conan install' already ran
+-- Conan: Component target declared 'CURL::libcurl'
+-- Configuring done (3.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug

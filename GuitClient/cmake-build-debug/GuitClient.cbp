@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GuitClient"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\conan\;CMake Files\cmake-build-debug\conan\build\;CMake Files\cmake-build-debug\conan\build\Debug\;CMake Files\cmake-build-debug\conan\build\Debug\generators\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\home\;CMake Files\..\..\..\..\..\..\..\home\alex\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\openscc38e2e8a963d\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\openscc38e2e8a963d\p\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\openscc38e2e8a963d\p\lib\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\openscc38e2e8a963d\p\lib\cmake\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\bzip2bc91f376253e8\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\bzip2bc91f376253e8\p\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\bzip2bc91f376253e8\p\lib\;CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\bzip2bc91f376253e8\p\lib\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GuitClient">
+				<Option output="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/GuitClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_NO_ASYNCRTIMP"/>
+					<Add option="-D_NO_PPLXIMP"/>
+					<Add option="-DBOOST_STACKTRACE_USE_NOOP"/>
+					<Add option="-DBOOST_STACKTRACE_USE_BACKTRACE"/>
+					<Add option="-DBOOST_STACKTRACE_ADDR2LINE_LOCATION=&quot;/usr/bin/addr2line&quot;"/>
+					<Add option="-DBOOST_STACKTRACE_USE_ADDR2LINE"/>
+					<Add option="-DCURL_STATICLIB=1"/>
+					<Add directory="/home/alex/.conan2/p/b/cppre392ba417172d2/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/boost2ef007b40ad77/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/libba475828ab0a986/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 GuitClient"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GuitClient/fast">
+				<Option output="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/GuitClient" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_NO_ASYNCRTIMP"/>
+					<Add option="-D_NO_PPLXIMP"/>
+					<Add option="-DBOOST_STACKTRACE_USE_NOOP"/>
+					<Add option="-DBOOST_STACKTRACE_USE_BACKTRACE"/>
+					<Add option="-DBOOST_STACKTRACE_ADDR2LINE_LOCATION=&quot;/usr/bin/addr2line&quot;"/>
+					<Add option="-DBOOST_STACKTRACE_USE_ADDR2LINE"/>
+					<Add option="-DCURL_STATICLIB=1"/>
+					<Add directory="/home/alex/.conan2/p/b/cppre392ba417172d2/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/boost2ef007b40ad77/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/libba475828ab0a986/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 GuitClient/fast"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j12 -f &quot;/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/AddCommand.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/AddCommand.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/Command.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/Command.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/InitCommand.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/InitCommand.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitHelp.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitHelp.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitReset.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitReset.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitStatus.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitStatus.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/lsCommand.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/lsCommand.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/FileStatus.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/FileStatus.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/listaEnlazada.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/listaEnlazada.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/DirectoryManager.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/DirectoryManager.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/NetworkManager.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Managers/NetworkManager.h">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/main.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/conan_provider.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/conanfile.py">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BZip2-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BZip2-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BZip2Config.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BZip2ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BZip2Targets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/Boost-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/Boost-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BoostTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURL-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURL-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURLConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURLTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/OpenSSL-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/OpenSSL-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/OpenSSLConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/OpenSSLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/OpenSSLTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/ZLIB-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/ZLIB-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/ZLIBConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/ZLIBConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/ZLIBTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/cmakedeps_macros.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/cpprestsdk-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/cpprestsdk-config-version.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/cpprestsdk-config.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/cpprestsdk-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/cpprestsdkTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/libbacktrace-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/libbacktrace-config-version.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/libbacktrace-config.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/libbacktrace-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/libbacktraceTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/websocketpp-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/websocketpp-config-version.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/websocketpp-config.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/websocketpp-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/websocketppTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/../../../../../../../home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/cmake/conan-official-openssl-variables.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\openscc38e2e8a963d\p\lib\cmake\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/../../../../../../../home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib/cmake/conan-official-bzip2-variables.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\home\alex\.conan2\p\b\bzip2bc91f376253e8\p\lib\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

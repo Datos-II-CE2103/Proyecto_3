@@ -1,0 +1,3 @@
+/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles/GuitClient.dir
+/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
