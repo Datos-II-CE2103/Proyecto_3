@@ -1,14 +1,10 @@
-//
-// Created by amv22 on 13/6/2024.
-//
+#ifndef DIRECTORY_MANAGER_H
+#define DIRECTORY_MANAGER_H
 
-#ifndef GUITCLIENT_DIRECTORYMANAGER_H
-#define GUITCLIENT_DIRECTORYMANAGER_H
+#include <filesystem>
 
+extern std::filesystem::path currentDirectory;
 
-class DirectoryManager {
+void changeDirectory(const std::string& path);
 
-};
-
-
-#endif //GUITCLIENT_DIRECTORYMANAGER_H
+#endif // DIRECTORY_MANAGER_H

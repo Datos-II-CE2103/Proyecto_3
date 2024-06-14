@@ -1,15 +1,8 @@
-#ifndef GUITCLIENT_INITCOMMAND_H
-#define GUITCLIENT_INITCOMMAND_H
+#ifndef GUIT_INIT_H
+#define GUIT_INIT_H
 
-#include "Command.h"
+#include <string>
 
-class InitCommand : public Command {
-public:
-    InitCommand(const std::string& name, const std::string& description);
+void guitInit(const std::string& nombre);
 
-    void execute() override;
-    std::string toJson() const override;
-};
-
-#endif // INITCOMMAND_H
-
+#endif // GUIT_INIT

@@ -1,0 +1,6 @@
+main.cpp
+conanfile.py
+.guitignore
+.guit/index
+.guit/config
+readme.md

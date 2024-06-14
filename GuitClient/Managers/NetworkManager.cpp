@@ -1,32 +1,22 @@
 #include "NetworkManager.h"
-#include <cpprest/http_client.h>
 
-using namespace web;
-using namespace web::http;
-using namespace web::http::client;
-
-NetworkManager::NetworkManager(const std::string& serverAddress, int port)
-        : serverAddress(serverAddress), port(port), client(U(serverAddress + ":" + std::to_string(port))) {
-    // Constructor
+NetworkManager& NetworkManager::getInstance() {
+    static NetworkManager instance;
+    return instance;
 }
 
-void NetworkManager::sendRequest(const Command& command) {
-    http_request request(methods::POST);
+pplx::task<web::json::value> NetworkManager::post(const std::string& url, const std::string& json_body) {
+    web::http::client::http_client client(U(url));
+    web::http::http_request request(web::http::methods::POST);
     request.headers().set_content_type(U("application/json"));
-
-    // Convert Command to JSON and set as request body
-    std::string json_body = command.toJson();
     request.set_body(json_body);
 
-    client.request(request).then([this](http_response response) {
-        if (response.status_code() == status_codes::OK || response.status_code() == status_codes::Created) {
-            lastResponse = response;
+    return client.request(request).then([](web::http::http_response response) {
+        if (response.status_code() == web::http::status_codes::Created) {
+            return response.extract_json();
         } else {
-            std::cerr << "Error in REST request: " << response.status_code() << std::endl;
+            std::cerr << "Error en la solicitud REST." << std::endl;
+            return pplx::task_from_result(web::json::value());
         }
-    }).wait();
-}
-
-http_response NetworkManager::receiveResponse() const {
-    return lastResponse;
+    });
 }

@@ -1,4 +1,4 @@
-# Install script for directory: /home/jose_barquero/Proyecto_3/GuitClient
+# Install script for directory: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

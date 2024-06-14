@@ -14,7 +14,15 @@ add_executable(GuitClient main.cpp
         Managers/NetworkManager.cpp
         Managers/NetworkManager.h
         Data_Structures/FileStatus.cpp
-        Data_Structures/FileStatus.h)
+        Data_Structures/FileStatus.h
+        Commands/AddCommand.cpp
+        Commands/AddCommand.h
+        Data_Structures/listaEnlazada.cpp
+        Data_Structures/listaEnlazada.h
+        Managers/DirectoryManager.cpp
+        Managers/DirectoryManager.h
+        Commands/lsCommand.cpp
+        Commands/lsCommand.h)
 
 
 target_link_libraries(GuitClient cpprestsdk::cpprestsdk)

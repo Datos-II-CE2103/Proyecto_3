@@ -1,20 +1,8 @@
-#ifndef GUITCLIENT_COMMAND_H
-#define GUITCLIENT_COMMAND_H
+#ifndef COMMANDS_H
+#define COMMANDS_H
 
 #include <string>
 
-class Command {
-public:
-    Command(const std::string& name, const std::string& description);
-    virtual ~Command() = default;
+void processCommand(const std::string& command);
 
-    virtual void execute() = 0;
-    virtual std::string toJson() const = 0;
-
-protected:
-    std::string name;
-    std::string description;
-};
-
-#endif // COMMAND_H
-
+#endif // COMMANDS_H

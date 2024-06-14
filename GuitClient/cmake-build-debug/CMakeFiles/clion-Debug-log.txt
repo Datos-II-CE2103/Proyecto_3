@@ -1,14 +1,23 @@
-/snap/clion/282/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/282/bin/ninja/linux/x64/ninja -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake -G Ninja -S /home/jose_barquero/Proyecto_3/GuitClient -B /home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug
+C:\Windows\system32\wsl.exe --distribution Ubuntu-24.04 --exec "/mnt/c/Program Files/JetBrains/CLion 2024.1.1/bin/ttyfix" /bin/bash -c "export CLION_IDE=TRUE && export CMAKE_COLOR_DIAGNOSTICS=ON && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=conan_provider.cmake -G 'CodeBlocks - Unix Makefiles' -S /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient -B /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug"
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
 -- CMake-Conan: first find_package() found. Installing dependencies with Conan
 -- CMake-Conan: Checking if a default profile exists
-/home/jose_barquero/.conan2/profiles/default
+/home/alex/.conan2/profiles/default
 -- CMake-Conan: cmake_system_name=Linux
 -- CMake-Conan: cmake_system_processor=x86_64
 -- CMake-Conan: CMake compiler=GNU
 -- CMake-Conan: CMake compiler version=13.2.0
 -- CMake-Conan: [settings] compiler=gcc
 -- CMake-Conan: [settings] compiler.version=13
--- CMake-Conan: Creating profile /home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/conan_host_profile
+-- CMake-Conan: Creating profile /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan_host_profile
 -- CMake-Conan: Profile: 
 [settings]
 arch=x86_64
@@ -19,11 +28,11 @@ compiler.cppstd=17
 compiler.libcxx=libstdc++11
 build_type=Debug
 [conf]
-tools.cmake.cmaketoolchain:generator=Ninja
+tools.cmake.cmaketoolchain:generator=Unix Makefiles
 tools.build:compiler_executables={"c":"/usr/bin/cc","cpp":"/usr/bin/c++"}
 
 -- CMake-Conan: Installing single configuration Debug
--- CMake-Conan: conan install /home/jose_barquero/Proyecto_3/GuitClient -of=/home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/conan --profile:host=default;--profile:host=/home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/conan_host_profile;--profile:build=default;--build=missing
+-- CMake-Conan: conan install /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient -of=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan --profile:host=default;--profile:host=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan_host_profile;--profile:build=default;--build=missing
 
 ======== Input profiles ========
 Profile host:
@@ -37,7 +46,7 @@ compiler.version=13
 os=Linux
 [conf]
 tools.build:compiler_executables={'c': '/usr/bin/cc', 'cpp': '/usr/bin/c++'}
-tools.cmake.cmaketoolchain:generator=Ninja
+tools.cmake.cmaketoolchain:generator=Unix Makefiles
 
 Profile build:
 [settings]
@@ -52,7 +61,7 @@ os=Linux
 
 ======== Computing dependency graph ========
 Graph root
-    conanfile.py: /home/jose_barquero/Proyecto_3/GuitClient/conanfile.py
+    conanfile.py: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/conanfile.py
 Requirements
     boost/1.83.0#f9d7f54f9095af0977b068c5e1164748 - Cache
     bzip2/1.0.8#457c272f7da34cb9c67456dd217d36c4 - Cache
@@ -69,13 +78,13 @@ Resolved version ranges
 
 ======== Computing necessary packages ========
 Requirements
-    boost/1.83.0#f9d7f54f9095af0977b068c5e1164748:1ae0c38f94264681a756badd710deca8dda0939f#5e764615f7e15ec36ddc10f0f9197efe - Cache
-    bzip2/1.0.8#457c272f7da34cb9c67456dd217d36c4:f658a7d5064609a1016f930e03b14f656c1975b8#b236880b354c37cfbece923d7c206a68 - Cache
-    cpprestsdk/2.10.19#fc44e90f5159be5817ef170cc46961b3:f72f0bf52ddf92c3ac8108599455bc7e5c657381#397f0e33af366383a016914eb0432303 - Cache
-    libbacktrace/cci.20210118#ec1aa63bbc10145c6a299e68e711670c:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#b5631eeee1ed083eae69043243bbf7e9 - Cache
-    openssl/3.2.2#899583c694f9deccec74dbe0bbc65a15:d2f92b60661cceae349d2ba130929587698dab48#bf6daf0d784e4e5f89b93f768b3ac7f3 - Cache
+    boost/1.83.0#f9d7f54f9095af0977b068c5e1164748:1ae0c38f94264681a756badd710deca8dda0939f#5b719b3608996ea48212b4e271bfbf05 - Cache
+    bzip2/1.0.8#457c272f7da34cb9c67456dd217d36c4:f658a7d5064609a1016f930e03b14f656c1975b8#c98e3fe57f3ba943749467d3c732f4ec - Cache
+    cpprestsdk/2.10.19#fc44e90f5159be5817ef170cc46961b3:f72f0bf52ddf92c3ac8108599455bc7e5c657381#08c73cb1978af484bd11169eadf94315 - Cache
+    libbacktrace/cci.20210118#ec1aa63bbc10145c6a299e68e711670c:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#e522b2cda55cbec4255ec52875d1fecd - Cache
+    openssl/3.2.2#899583c694f9deccec74dbe0bbc65a15:d2f92b60661cceae349d2ba130929587698dab48#ad23303cf6d827e6b4a8f226657b88f4 - Cache
     websocketpp/0.8.2#842a0419153a8aa52f3ea3a1da557d38:da39a3ee5e6b4b0d3255bfef95601890afd80709#8d95ef6d4cbb83d2ac764b984accfa53 - Cache
-    zlib/1.3.1#f52e03ae3d251dec704634230cd806a2:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#4ce918df96b5ba1ace0e6f224cd1fa1f - Cache
+    zlib/1.3.1#f52e03ae3d251dec704634230cd806a2:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#74a2d9166eff65b3b993ea25dde8d818 - Cache
 Build requirements
 Skipped binaries
     b2/4.10.1
@@ -89,31 +98,31 @@ openssl/3.2.2: Already installed! (5 of 7)
 websocketpp/0.8.2: Already installed! (6 of 7)
 cpprestsdk/2.10.19: Already installed! (7 of 7)
 WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
-WARN: deprecated:     'cpp_info.names' used in: bzip2/1.0.8, openssl/3.2.2, zlib/1.3.1, boost/1.83.0
-WARN: deprecated:     'cpp_info.build_modules' used in: bzip2/1.0.8, openssl/3.2.2
-WARN: deprecated:     'env_info' used in: bzip2/1.0.8, openssl/3.2.2, boost/1.83.0
+WARN: deprecated:     'cpp_info.names' used in: openssl/3.2.2, boost/1.83.0, bzip2/1.0.8, zlib/1.3.1
+WARN: deprecated:     'cpp_info.build_modules' used in: openssl/3.2.2, bzip2/1.0.8
+WARN: deprecated:     'env_info' used in: openssl/3.2.2, boost/1.83.0, bzip2/1.0.8
 WARN: deprecated:     'cpp_info.filenames' used in: boost/1.83.0
 WARN: deprecated:     'user_info' used in: boost/1.83.0
 
 ======== Finalizing install (deploy, generators) ========
-conanfile.py: Writing generators to /home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
+conanfile.py: Writing generators to /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
 conanfile.py: Generator 'CMakeDeps' calling 'generate()'
 conanfile.py: CMakeDeps necessary find_package() and targets for your CMakeLists.txt
     find_package(cpprestsdk)
     find_package(Boost)
     target_link_libraries(... cpprestsdk::cpprestsdk boost::boost)
 conanfile.py: Calling generate()
-conanfile.py: Generators folder: /home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
+conanfile.py: Generators folder: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
 conanfile.py: CMakeToolchain generated: conan_toolchain.cmake
 conanfile.py: CMakeToolchain: Preset 'conan-debug' added to CMakePresets.json.
     (cmake>=3.23) cmake --preset conan-debug
-    (cmake<3.23) cmake <path> -G Ninja -DCMAKE_TOOLCHAIN_FILE=generators/conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_BUILD_TYPE=Debug
-conanfile.py: CMakeToolchain generated: /home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CMakePresets.json
+    (cmake<3.23) cmake <path> -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=generators/conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_BUILD_TYPE=Debug
+conanfile.py: CMakeToolchain generated: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CMakePresets.json
 conanfile.py: Generating aggregated env files
 conanfile.py: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
 Install finished successfully
--- CMake-Conan: CONAN_GENERATORS_FOLDER=/home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
--- CMake-Conan: CONANFILE=/home/jose_barquero/Proyecto_3/GuitClient/conanfile.py
+-- CMake-Conan: CONAN_GENERATORS_FOLDER=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
+-- CMake-Conan: CONANFILE=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/conanfile.py
 -- Conan: Component target declared 'cpprestsdk::cpprestsdk_boost_internal'
 -- Conan: Component target declared 'cpprestsdk::cpprestsdk_openssl_internal'
 -- Conan: Component target declared 'cpprestsdk::cpprestsdk_zlib_internal'
@@ -128,7 +137,7 @@ Install finished successfully
 -- Conan: Target declared 'openssl::openssl'
 -- CMake-Conan: find_package(ZLIB) found, 'conan install' already ran
 -- Conan: Target declared 'ZLIB::ZLIB'
--- Conan: Including build module from '/home/jose_barquero/.conan2/p/b/opens06f06a0744495/p/lib/cmake/conan-official-openssl-variables.cmake'
+-- Conan: Including build module from '/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/cmake/conan-official-openssl-variables.cmake'
 -- CMake-Conan: find_package(Boost) found, 'conan install' already ran
 -- Conan: Component target declared 'Boost::diagnostic_definitions'
 -- Conan: Component target declared 'Boost::disable_autolinking'
@@ -184,10 +193,10 @@ Install finished successfully
 -- Conan: Target declared 'boost::boost'
 -- CMake-Conan: find_package(BZip2) found, 'conan install' already ran
 -- Conan: Target declared 'BZip2::BZip2'
--- Conan: Including build module from '/home/jose_barquero/.conan2/p/b/bzip2debe9180bdaf3/p/lib/cmake/conan-official-bzip2-variables.cmake'
+-- Conan: Including build module from '/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib/cmake/conan-official-bzip2-variables.cmake'
 -- CMake-Conan: find_package(libbacktrace) found, 'conan install' already ran
 -- Conan: Target declared 'libbacktrace::libbacktrace'
 -- CMake-Conan: find_package(Boost) found, 'conan install' already ran
 -- Configuring done (2.6s)
--- Generating done (0.0s)
--- Build files have been written to: /home/jose_barquero/Proyecto_3/GuitClient/cmake-build-debug
+-- Generating done (0.1s)
+-- Build files have been written to: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug

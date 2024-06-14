@@ -1,0 +1,1 @@
+. "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/conanrunenv-debug-x86_64.sh"

@@ -1,14 +1,8 @@
-//
-// Created by amv22 on 13/6/2024.
-//
+#ifndef GUIT_ADD_H
+#define GUIT_ADD_H
 
-#ifndef GUITCLIENT_ADDCOMMAND_H
-#define GUITCLIENT_ADDCOMMAND_H
+#include <string>
 
+void guitAdd(const std::string& args);
 
-class AddCommand {
-
-};
-
-
-#endif //GUITCLIENT_ADDCOMMAND_H
+#endif // GUIT_ADD_H
