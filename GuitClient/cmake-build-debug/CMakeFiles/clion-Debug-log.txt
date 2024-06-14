@@ -60,6 +60,33 @@ os=Linux
 
 
 ======== Computing dependency graph ========
+libcurl/8.8.0: Not found in local cache, looking in remotes...
+libcurl/8.8.0: Checking remote: conancenter
+libcurl/8.8.0: Downloaded recipe revision 9170903d66d6f6e6795fbb566a403129
+libtool/2.4.7: Not found in local cache, looking in remotes...
+libtool/2.4.7: Checking remote: conancenter
+libtool/2.4.7: Downloaded recipe revision 08316dad5c72c541ed21e039e4cf217b
+automake/1.16.5: Not found in local cache, looking in remotes...
+automake/1.16.5: Checking remote: conancenter
+automake/1.16.5: Downloaded recipe revision 058bda3e21c36c9aa8425daf3c1faf50
+autoconf/2.71: Not found in local cache, looking in remotes...
+autoconf/2.71: Checking remote: conancenter
+autoconf/2.71: Downloaded recipe revision f9307992909d7fb3df459340f1932809
+m4/1.4.19: Not found in local cache, looking in remotes...
+m4/1.4.19: Checking remote: conancenter
+m4/1.4.19: Downloaded recipe revision b38ced39a01e31fef5435bc634461fd2
+gnu-config/cci.20210814: Not found in local cache, looking in remotes...
+gnu-config/cci.20210814: Checking remote: conancenter
+gnu-config/cci.20210814: Downloaded recipe revision dc430d754f465e8c74463019672fb97b
+pkgconf/2.1.0: Not found in local cache, looking in remotes...
+pkgconf/2.1.0: Checking remote: conancenter
+pkgconf/2.1.0: Downloaded recipe revision 27f44583701117b571307cf5b5fe5605
+meson/1.2.2: Not found in local cache, looking in remotes...
+meson/1.2.2: Checking remote: conancenter
+meson/1.2.2: Downloaded recipe revision 04bdfb85d665c82b08a3510aee3ffd19
+ninja/1.11.1: Not found in local cache, looking in remotes...
+ninja/1.11.1: Checking remote: conancenter
+ninja/1.11.1: Downloaded recipe revision 77587f8c8318662ac8e5a7867eb4be21
 Graph root
     conanfile.py: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/conanfile.py
 Requirements
@@ -67,11 +94,20 @@ Requirements
     bzip2/1.0.8#457c272f7da34cb9c67456dd217d36c4 - Cache
     cpprestsdk/2.10.19#fc44e90f5159be5817ef170cc46961b3 - Cache
     libbacktrace/cci.20210118#ec1aa63bbc10145c6a299e68e711670c - Cache
+    libcurl/8.8.0#9170903d66d6f6e6795fbb566a403129 - Downloaded (conancenter)
     openssl/3.2.2#899583c694f9deccec74dbe0bbc65a15 - Cache
     websocketpp/0.8.2#842a0419153a8aa52f3ea3a1da557d38 - Cache
     zlib/1.3.1#f52e03ae3d251dec704634230cd806a2 - Cache
 Build requirements
+    autoconf/2.71#f9307992909d7fb3df459340f1932809 - Downloaded (conancenter)
+    automake/1.16.5#058bda3e21c36c9aa8425daf3c1faf50 - Downloaded (conancenter)
     b2/4.10.1#a41eecb267963ddf518e3c177eae60e1 - Cache
+    gnu-config/cci.20210814#dc430d754f465e8c74463019672fb97b - Downloaded (conancenter)
+    libtool/2.4.7#08316dad5c72c541ed21e039e4cf217b - Downloaded (conancenter)
+    m4/1.4.19#b38ced39a01e31fef5435bc634461fd2 - Downloaded (conancenter)
+    meson/1.2.2#04bdfb85d665c82b08a3510aee3ffd19 - Downloaded (conancenter)
+    ninja/1.11.1#77587f8c8318662ac8e5a7867eb4be21 - Downloaded (conancenter)
+    pkgconf/2.1.0#27f44583701117b571307cf5b5fe5605 - Downloaded (conancenter)
 Resolved version ranges
     openssl/[>=1.1 <4]: openssl/3.2.2
     zlib/[>=1.2.11 <2]: zlib/1.3.1
@@ -82,35 +118,1588 @@ Requirements
     bzip2/1.0.8#457c272f7da34cb9c67456dd217d36c4:f658a7d5064609a1016f930e03b14f656c1975b8#c98e3fe57f3ba943749467d3c732f4ec - Cache
     cpprestsdk/2.10.19#fc44e90f5159be5817ef170cc46961b3:f72f0bf52ddf92c3ac8108599455bc7e5c657381#08c73cb1978af484bd11169eadf94315 - Cache
     libbacktrace/cci.20210118#ec1aa63bbc10145c6a299e68e711670c:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#e522b2cda55cbec4255ec52875d1fecd - Cache
+    libcurl/8.8.0#9170903d66d6f6e6795fbb566a403129:3b8f43bb1ada3c8e2c1f1305688a6bda59ef87d8 - Build
     openssl/3.2.2#899583c694f9deccec74dbe0bbc65a15:d2f92b60661cceae349d2ba130929587698dab48#ad23303cf6d827e6b4a8f226657b88f4 - Cache
     websocketpp/0.8.2#842a0419153a8aa52f3ea3a1da557d38:da39a3ee5e6b4b0d3255bfef95601890afd80709#8d95ef6d4cbb83d2ac764b984accfa53 - Cache
     zlib/1.3.1#f52e03ae3d251dec704634230cd806a2:38b2cc754fb9d09f09f3ffbd1ad34ef29bbb4b77#74a2d9166eff65b3b993ea25dde8d818 - Cache
 Build requirements
+    autoconf/2.71#f9307992909d7fb3df459340f1932809:da39a3ee5e6b4b0d3255bfef95601890afd80709#5b77f70c17ad1741f5845d4e468a347e - Download (conancenter)
+    automake/1.16.5#058bda3e21c36c9aa8425daf3c1faf50:9a4eb3c8701508aa9458b1a73d0633783ecc2270#9719e51a6a62041af6a63e00eef35434 - Download (conancenter)
+    gnu-config/cci.20210814#dc430d754f465e8c74463019672fb97b:da39a3ee5e6b4b0d3255bfef95601890afd80709#22618e30bd9e326eb95e824dc90cc860 - Download (conancenter)
+    libtool/2.4.7#08316dad5c72c541ed21e039e4cf217b:c81087b06d1a5beef0ad711fc32d45f7a425a8f3 - Build
+    m4/1.4.19#b38ced39a01e31fef5435bc634461fd2:3593751651824fb813502c69c971267624ced41a#cd8019a4f9b70880d548f7cc26569604 - Download (conancenter)
+    pkgconf/2.1.0#27f44583701117b571307cf5b5fe5605:c0b621fd4b3199fe05075171573398833dba85f4#74a82dec52448dda20253a19d65965c7 - Download (conancenter)
 Skipped binaries
-    b2/4.10.1
+    b2/4.10.1, meson/1.2.2, ninja/1.11.1
 
 ======== Installing packages ========
-bzip2/1.0.8: Already installed! (1 of 7)
-libbacktrace/cci.20210118: Already installed! (2 of 7)
-zlib/1.3.1: Already installed! (3 of 7)
-boost/1.83.0: Already installed! (4 of 7)
-openssl/3.2.2: Already installed! (5 of 7)
-websocketpp/0.8.2: Already installed! (6 of 7)
-cpprestsdk/2.10.19: Already installed! (7 of 7)
+
+-------- Downloading 5 packages --------
+gnu-config/cci.20210814: Retrieving package da39a3ee5e6b4b0d3255bfef95601890afd80709 from remote 'conancenter' 
+gnu-config/cci.20210814: Package installed da39a3ee5e6b4b0d3255bfef95601890afd80709
+gnu-config/cci.20210814: Downloaded package revision 22618e30bd9e326eb95e824dc90cc860
+m4/1.4.19: Retrieving package 3593751651824fb813502c69c971267624ced41a from remote 'conancenter' 
+m4/1.4.19: Package installed 3593751651824fb813502c69c971267624ced41a
+m4/1.4.19: Downloaded package revision cd8019a4f9b70880d548f7cc26569604
+pkgconf/2.1.0: Retrieving package c0b621fd4b3199fe05075171573398833dba85f4 from remote 'conancenter' 
+pkgconf/2.1.0: Package installed c0b621fd4b3199fe05075171573398833dba85f4
+pkgconf/2.1.0: Downloaded package revision 74a82dec52448dda20253a19d65965c7
+autoconf/2.71: Retrieving package da39a3ee5e6b4b0d3255bfef95601890afd80709 from remote 'conancenter' 
+autoconf/2.71: Package installed da39a3ee5e6b4b0d3255bfef95601890afd80709
+autoconf/2.71: Downloaded package revision 5b77f70c17ad1741f5845d4e468a347e
+automake/1.16.5: Retrieving package 9a4eb3c8701508aa9458b1a73d0633783ecc2270 from remote 'conancenter' 
+automake/1.16.5: Package installed 9a4eb3c8701508aa9458b1a73d0633783ecc2270
+automake/1.16.5: Downloaded package revision 9719e51a6a62041af6a63e00eef35434
+bzip2/1.0.8: Already installed! (1 of 14)
+libbacktrace/cci.20210118: Already installed! (3 of 14)
+zlib/1.3.1: Already installed! (5 of 14)
+pkgconf/2.1.0: WARN: The use of 'unix_path_legacy_compat' is deprecated in Conan 2.0 and does not perform path conversions. This is retained for compatibility with Conan 1.x and will be removed in a future version.
+boost/1.83.0: Already installed! (8 of 14)
+openssl/3.2.2: Already installed! (9 of 14)
+websocketpp/0.8.2: Already installed! (11 of 14)
+cpprestsdk/2.10.19: Already installed! (12 of 14)
+libtool/2.4.7: Sources downloaded from 'conancenter'
+libtool/2.4.7: Calling source() in /home/alex/.conan2/p/libto0f3efefe94abb/s/src
+
+-------- Installing package libtool/2.4.7 (13 of 14) --------
+libtool/2.4.7: Building from source
+libtool/2.4.7: Package libtool/2.4.7:c81087b06d1a5beef0ad711fc32d45f7a425a8f3
+libtool/2.4.7: Copying sources to build folder
+libtool/2.4.7: Building your package in /home/alex/.conan2/p/b/libto6748de9b4281b/b
+libtool/2.4.7: Calling generate()
+libtool/2.4.7: Generators folder: /home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/conan
+libtool/2.4.7: Generating aggregated env files
+libtool/2.4.7: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+libtool/2.4.7: Calling build()
+libtool/2.4.7: Apply patch (portability): Make libtool relocatable
+libtool/2.4.7: RUN: "/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/configure" --disable-shared --enable-static --prefix=/ '--bindir=${prefix}/bin' '--sbindir=${prefix}/bin' '--libdir=${prefix}/lib' '--includedir=${prefix}/include' '--oldincludedir=${prefix}/include' '--datarootdir=${prefix}/res' --enable-shared --enable-static --enable-ltdl-install 
+## ------------------------- ##
+## Configuring libtool 2.4.7 ##
+## ------------------------- ##
+
+checking for GNU M4 that supports accurate traces... /home/alex/.conan2/p/m43fe61932e2887/p/bin/m4
+checking whether /home/alex/.conan2/p/m43fe61932e2887/p/bin/m4 accepts --gnu... yes
+checking how m4 supports trace files... --debugfile
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+configure: autobuild project... GNU Libtool
+configure: autobuild revision... 2.4.7
+configure: autobuild hostname... ALEXTW
+configure: autobuild mode... default
+configure: autobuild timestamp... 20240614T073410Z
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... none
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking how to run the C preprocessor... gcc -E
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... (cached) ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking what extension is used for runtime loadable modules... .so
+checking what variable specifies run-time module search path... LD_LIBRARY_PATH
+checking for the default library search path... /lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/lib/wsl/lib /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu 
+checking for library containing dlopen... none required
+checking for dlerror... yes
+checking for shl_load... (cached) no
+checking for shl_load in -ldld... (cached) no
+checking for dld_link in -ldld... no
+checking for _ prefix in compiled symbols... no
+checking whether deplibs are loaded by dlopen... yes
+checking for argz.h... yes
+checking for error_t... yes
+checking for argz_add... yes
+checking for argz_append... yes
+checking for argz_count... yes
+checking for argz_create_sep... yes
+checking for argz_insert... yes
+checking for argz_next... yes
+checking for argz_stringify... yes
+checking if argz actually works... yes
+checking whether libtool supports -dlopen/-dlpreopen... yes
+checking for unistd.h... (cached) yes
+checking for dl.h... no
+checking for sys/dl.h... no
+checking for dld.h... no
+checking for mach-o/dyld.h... no
+checking for dirent.h... yes
+checking for closedir... yes
+checking for opendir... yes
+checking for readdir... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for g77... no
+checking for xlf... no
+checking for f77... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for xlf90... no
+checking for f90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for gfortran... no
+checking for g95... no
+checking for xlf95... no
+checking for f95... no
+checking for fort... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgfortran... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking for nagfor... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking for gfortran... no
+checking for g95... no
+checking for xlf95... no
+checking for f95... no
+checking for fort... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgfortran... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking for nagfor... no
+checking for xlf90... no
+checking for f90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for g77... no
+checking for xlf... no
+checking for f77... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking whether we are using the GNU Fortran compiler... no
+checking whether  accepts -g... no
+checking for gccgo... no
+checking for gcj... no
+checking for windres... no
+checking for C compiler option to allow warnings... -Wno-error
+checking for C++ compiler option to allow warnings... -Wno-error
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating gnulib-tests/Makefile
+config.status: creating config.h
+config.status: linking /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/GNUmakefile to GNUmakefile
+config.status: executing tests/atconfig commands
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+libtool/2.4.7: RUN: make -j12
+  GEN      libtoolize
+make  all-recursive
+make[1]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+Making all in .
+make[2]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+  CC       libltdl/loaders/libltdl_la-preopen.lo
+  CC       libltdl/libltdl_la-lt__alloc.lo
+  CC       libltdl/libltdl_la-lt_dlloader.lo
+  CC       libltdl/libltdl_la-lt_error.lo
+  CC       libltdl/libltdl_la-ltdl.lo
+  CC       libltdl/libltdl_la-slist.lo
+  CC       libltdl/loaders/dlopen.lo
+  CCLD     libltdl/dlopen.la
+  CCLD     libltdl/libltdl.la
+make[2]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+Making all in gnulib-tests
+make[2]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+## ---------------------------------------------------- ##
+## ------------------- Gnulib tests ------------------- ##
+## You can ignore compiler warnings in this directory.  ##
+## ---------------------------------------------------- ##
+make  all-recursive
+make[3]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+Making all in .
+make[4]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[3]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[2]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[1]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+
+libtool/2.4.7: Package 'c81087b06d1a5beef0ad711fc32d45f7a425a8f3' built
+libtool/2.4.7: Build folder /home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release
+libtool/2.4.7: Generating the package
+libtool/2.4.7: Packaging in folder /home/alex/.conan2/p/b/libto6748de9b4281b/p
+libtool/2.4.7: Calling package()
+libtool/2.4.7: RUN: make install DESTDIR=/home/alex/.conan2/p/b/libto6748de9b4281b/p -j12
+make  install-recursive
+make[1]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+Making install in .
+make[2]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+make[3]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libto6748de9b4281b/p//bin'
+ /usr/bin/install -c libtool '/home/alex/.conan2/p/b/libto6748de9b4281b/p//bin'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libto6748de9b4281b/p//lib'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libto6748de9b4281b/p//include'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libto6748de9b4281b/p//include/libltdl'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libltdl/libltdl.la '/home/alex/.conan2/p/b/libto6748de9b4281b/p//lib'
+ GREP='/usr/bin/grep' SED='/usr/bin/sed' '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/inline-source' libtoolize > '/home/alex/.conan2/p/b/libto6748de9b4281b/p//bin/libtoolize'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/man/man1'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/info'
+ /usr/bin/install -c -m 644 /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/ltdl.h '/home/alex/.conan2/p/b/libto6748de9b4281b/p//include'
+ /usr/bin/install -c -m 644 /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt_system.h /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt_error.h /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt_dlloader.h '/home/alex/.conan2/p/b/libto6748de9b4281b/p//include/libltdl'
+ /usr/bin/install -c -m 644 /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/doc/libtool.1 /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/doc/libtoolize.1 '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/man/man1'
+ /usr/bin/install -c -m 644 /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/doc/libtool.info /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/doc/libtool.info-1 /home/alex/.conan2/p/b/libto6748de9b4281b/b/src/doc/libtool.info-2 '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/info'
+ install-info --info-dir='/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/info' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/info/libtool.info'
+libtool: install: /usr/bin/install -c libltdl/.libs/libltdl.so.7.3.2 /home/alex/.conan2/p/b/libto6748de9b4281b/p//lib/libltdl.so.7.3.2
+libtool: install: (cd /home/alex/.conan2/p/b/libto6748de9b4281b/p//lib && { ln -s -f libltdl.so.7.3.2 libltdl.so.7 || { rm -f libltdl.so.7 && ln -s libltdl.so.7.3.2 libltdl.so.7; }; })
+libtool: install: (cd /home/alex/.conan2/p/b/libto6748de9b4281b/p//lib && { ln -s -f libltdl.so.7.3.2 libltdl.so || { rm -f libltdl.so && ln -s libltdl.so.7.3.2 libltdl.so; }; })
+libtool: install: /usr/bin/install -c libltdl/.libs/libltdl.lai /home/alex/.conan2/p/b/libto6748de9b4281b/p//lib/libltdl.la
+libtool: install: /usr/bin/install -c libltdl/.libs/libltdl.a /home/alex/.conan2/p/b/libto6748de9b4281b/p//lib/libltdl.a
+libtool: install: chmod 644 /home/alex/.conan2/p/b/libto6748de9b4281b/p//lib/libltdl.a
+libtool: install: ranlib /home/alex/.conan2/p/b/libto6748de9b4281b/p//lib/libltdl.a
+libtool: warning: remember to run 'libtool --finish //lib'
+rm -rf '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool'/*
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/m4/libtool.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/aclocal/libtool.m4'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/m4/ltargz.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/aclocal/ltargz.m4'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/m4/ltdl.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/aclocal/ltdl.m4'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/m4/ltoptions.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/aclocal/ltoptions.m4'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/m4/ltsugar.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/aclocal/ltsugar.m4'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/m4/ltversion.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/aclocal/ltversion.m4'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/m4/lt~obsolete.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/aclocal/lt~obsolete.m4'
+ /usr/bin/install -c '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/compile' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/build-aux/compile'
+ /usr/bin/install -c '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/config.guess' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/build-aux/config.guess'
+ /usr/bin/install -c '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/config.sub' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/build-aux/config.sub'
+ /usr/bin/install -c '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/depcomp' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/build-aux/depcomp'
+ /usr/bin/install -c '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/install-sh' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/build-aux/install-sh'
+ /usr/bin/install -c '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/missing' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/build-aux/missing'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/build-aux/ltmain.sh' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/build-aux/ltmain.sh'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/COPYING.LIB' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/COPYING.LIB'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/Makefile.am' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/Makefile.am'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/README' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/README'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/configure.ac' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/configure.ac'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/aclocal.m4' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/aclocal.m4'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/Makefile.in' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/Makefile.in'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/config-h.in' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/config-h.in'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/configure' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/configure'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt__alloc.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt__alloc.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt__argz_.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt__argz_.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt__dirent.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt__dirent.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt__glibc.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt__glibc.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt__private.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt__private.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt__strl.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt__strl.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt_dlloader.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt_dlloader.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt_error.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt_error.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/lt_system.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/lt_system.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/libltdl/slist.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/libltdl/slist.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/loaders/dld_link.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/loaders/dld_link.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/loaders/dlopen.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/loaders/dlopen.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/loaders/dyld.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/loaders/dyld.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/loaders/load_add_on.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/loaders/load_add_on.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/loaders/loadlibrary.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/loaders/loadlibrary.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/loaders/preopen.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/loaders/preopen.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/loaders/shl_load.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/loaders/shl_load.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/lt__alloc.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/lt__alloc.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/lt__argz.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/lt__argz.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/lt__dirent.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/lt__dirent.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/lt__strl.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/lt__strl.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/lt_dlloader.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/lt_dlloader.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/lt_error.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/lt_error.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/ltdl.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/ltdl.c'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/ltdl.h' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/ltdl.h'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/ltdl.mk' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/ltdl.mk'
+ /usr/bin/install -c -m 644 '/home/alex/.conan2/p/b/libto6748de9b4281b/b/src/libltdl/slist.c' '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/slist.c'
+chmod a+x '/home/alex/.conan2/p/b/libto6748de9b4281b/p//res/libtool/configure'
+make[3]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+make[2]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+Making install in gnulib-tests
+make[2]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make  install-recursive
+make[3]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+Making install in .
+make[4]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[5]: Entering directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[4]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[3]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[2]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release/gnulib-tests'
+make[1]: Leaving directory '/home/alex/.conan2/p/b/libto6748de9b4281b/b/build-release'
+
+libtool/2.4.7: package(): Packaged 9 files
+libtool/2.4.7: package(): Packaged 1 '.a' file: libltdl.a
+libtool/2.4.7: package(): Packaged 15 '.h' files
+libtool/2.4.7: package(): Packaged 15 '.c' files
+libtool/2.4.7: package(): Packaged 2 '.in' files: config-h.in, Makefile.in
+libtool/2.4.7: package(): Packaged 1 '.am' file: Makefile.am
+libtool/2.4.7: package(): Packaged 1 '.LIB' file: COPYING.LIB
+libtool/2.4.7: package(): Packaged 1 '.mk' file: ltdl.mk
+libtool/2.4.7: package(): Packaged 8 '.m4' files
+libtool/2.4.7: package(): Packaged 1 '.ac' file: configure.ac
+libtool/2.4.7: package(): Packaged 1 '.sub' file: config.sub
+libtool/2.4.7: package(): Packaged 1 '.guess' file: config.guess
+libtool/2.4.7: package(): Packaged 1 '.sh' file: ltmain.sh
+libtool/2.4.7: Created package revision c0ec51e4bffe1a11bab66bad92336137
+libtool/2.4.7: Package 'c81087b06d1a5beef0ad711fc32d45f7a425a8f3' created
+libtool/2.4.7: Full package reference: libtool/2.4.7#08316dad5c72c541ed21e039e4cf217b:c81087b06d1a5beef0ad711fc32d45f7a425a8f3#c0ec51e4bffe1a11bab66bad92336137
+libtool/2.4.7: Package folder /home/alex/.conan2/p/b/libto6748de9b4281b/p
+libtool/2.4.7: WARN: The use of 'unix_path_legacy_compat' is deprecated in Conan 2.0 and does not perform path conversions. This is retained for compatibility with Conan 1.x and will be removed in a future version.
+libtool/2.4.7: WARN: The use of 'unix_path_legacy_compat' is deprecated in Conan 2.0 and does not perform path conversions. This is retained for compatibility with Conan 1.x and will be removed in a future version.
+libcurl/8.8.0: Sources downloaded from 'conancenter'
+libcurl/8.8.0: Calling source() in /home/alex/.conan2/p/libcud71b12bd29051/s/src
+
+-------- Installing package libcurl/8.8.0 (14 of 14) --------
+libcurl/8.8.0: Building from source
+libcurl/8.8.0: Package libcurl/8.8.0:3b8f43bb1ada3c8e2c1f1305688a6bda59ef87d8
+libcurl/8.8.0: Copying sources to build folder
+libcurl/8.8.0: Building your package in /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b
+libcurl/8.8.0: Calling generate()
+libcurl/8.8.0: Generators folder: /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/conan
+libcurl/8.8.0: Generating aggregated env files
+libcurl/8.8.0: Generated aggregated env files: ['conanbuild.sh']
+libcurl/8.8.0: Calling build()
+libcurl/8.8.0: apply_conandata_patches(): No patches defined in conandata
+libcurl/8.8.0: RUN: autoreconf --force --install
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+libtoolize: Remember to add 'LT_INIT' to configure.ac.
+configure.ac:124: installing './compile'
+configure.ac:130: installing './missing'
+docs/examples/Makefile.am: installing './depcomp'
+
+libcurl/8.8.0: RUN: "/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/configure" --disable-shared --enable-static --prefix=/ '--bindir=${prefix}/bin' '--sbindir=${prefix}/bin' '--libdir=${prefix}/lib' '--includedir=${prefix}/include' '--oldincludedir=${prefix}/include' --with-libidn2=no --with-librtmp=no --with-libpsl=no --with-libgsasl=no --with-schannel=no --with-secure-transport=no --with-brotli=no --enable-shared=no --enable-static=yes --enable-dict=yes --enable-file=yes --enable-ftp=yes --enable-gopher=yes --enable-http=yes --enable-imap=yes --enable-ldap=no --enable-mqtt=yes --enable-pop3=yes --enable-rtsp=yes --enable-smb=yes --enable-smtp=yes --enable-telnet=yes --enable-tftp=yes --enable-debug=yes --enable-ares=no --enable-threaded-resolver=yes --enable-cookies=yes --enable-ipv6=yes --enable-manual=no --enable-verbose=yes --enable-symbol-hiding=no --enable-unix-sockets=yes --with-zstd=no --with-openssl=/home/alex/.conan2/p/b/openscc38e2e8a963d/p --without-wolfssl --without-mbedtls --without-libssh2 --without-nghttp2 --with-zlib=/home/alex/.conan2/p/b/zlib11781dd5b91c3/p --with-ca-fallback=no --disable-docs 
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports nested variables... yes
+checking whether to enable debug build options... yes
+checking whether to enable compiler optimizer... (assumed) no
+checking whether to enable strict compiler warnings... yes
+checking whether to enable compiler warnings as errors... no
+checking whether to enable curl debug memory tracking... (assumed) yes
+checking whether to enable hiding of library internal symbols... no
+checking whether to enable c-ares for DNS lookups... no
+checking whether to disable dependency on -lrt... (assumed no)
+checking whether to enable HTTPSRR support... no
+checking whether to enable ECH support... no
+checking for path separator... :
+checking for sed... /usr/bin/sed
+checking for grep... /usr/bin/grep
+checking that grep -E works... yes
+checking for ar... /usr/bin/ar
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gcc... /usr/bin/cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/cc accepts -g... yes
+checking for /usr/bin/cc option to enable C11 features... none needed
+checking whether /usr/bin/cc understands -c and -o together... yes
+checking how to run the C preprocessor... /usr/bin/cc -E
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for stdatomic.h... yes
+checking if _Atomic is available... yes
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for code coverage support... no
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of /usr/bin/cc... gcc3
+checking curl version... 8.8.0
+checking for httpd... no
+checking for apache2... no
+checking for apachectl... no
+checking for apxs... no
+configure: httpd/apache2 not in PATH, http tests disabled
+configure: apxs not in PATH, http tests disabled
+checking for nghttpx... no
+checking for caddy... /usr/bin/caddy
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for grep that handles long lines and -e... (cached) /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking if OS is AIX (to define _ALL_SOURCE)... no
+checking if _THREAD_SAFE is already defined... no
+checking if _THREAD_SAFE is actually needed... no
+checking if _THREAD_SAFE is onwards defined... no
+checking if _REENTRANT is already defined... no
+checking if _REENTRANT is actually needed... no
+checking if _REENTRANT is onwards defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/bin/cc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from /usr/bin/cc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/bin/cc supports -fno-rtti -fno-exceptions... no
+checking for /usr/bin/cc option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/cc PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/cc static flag -static works... yes
+checking if /usr/bin/cc supports -c -o file.o... yes
+checking if /usr/bin/cc supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/cc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking whether to build shared libraries with -version-info... yes
+checking whether to build shared libraries with -no-undefined... no
+checking whether to build shared libraries with -mimpure-text... no
+checking whether to build shared libraries with PIC... yes
+checking whether to build static libraries with PIC... yes
+checking whether to build shared libraries only... no
+checking whether to build static libraries only... yes
+checking for windres... no
+checking if cpp -P is needed... yes
+checking if cpp -P works... yes
+checking if compiler is DEC/Compaq/HP C... no
+checking if compiler is HP-UX C... no
+checking if compiler is IBM C... no
+checking if compiler is Intel C... no
+checking if compiler is clang... no
+checking if compiler is GNU C... yes
+checking compiler version... gcc '1300' (raw: '13')
+checking if compiler is SunPro C... no
+checking if compiler is Tiny C... no
+checking whether build target is a native Windows one... no
+checking if compiler accepts some basic options... yes
+configure: compiler options added: -Werror-implicit-function-declaration 
+checking if compiler accepts debug enabling options... checking if compiler optimizer assumed setting might be used... yes
+checking if compiler accepts optimizer disabling options... yes
+configure: compiler options added: -O0
+checking if compiler accepts strict warning options... yes
+configure: compiler options added: -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wattributes -Wdiv-by-zero -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wunreachable-code -Wunused-parameter -Wpragmas -Wredundant-decls -Wcast-align -Waddress -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wtrampolines -Wsign-conversion -Wno-error=sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough -Warith-conversion -Wenum-conversion -Wno-system-headers 
+checking if compiler halts on compilation errors... yes
+checking if compiler halts on negative sized arrays... yes
+checking if compiler halts on function prototype mismatch... yes
+checking if compiler supports hiding library internal symbols... yes
+checking if curl debug memory tracking can be enabled... yes
+checking whether build target supports WIN32 file API... no
+checking whether build target supports WIN32 crypto API... no
+checking for good-to-use Darwin CFLAGS... no
+checking whether to link macOS CoreFoundation, CoreServices, and SystemConfiguration frameworks... no
+checking to see if the compiler supports __builtin_available()... no
+checking whether to support http... yes
+checking whether to support ftp... yes
+checking whether to support file... yes
+checking whether to support ldap... no
+checking whether to support ldaps... no
+checking whether to support rtsp... yes
+checking whether to support proxies... yes
+checking whether to support dict... yes
+checking whether to support telnet... yes
+checking whether to support tftp... yes
+checking whether to support pop3... yes
+checking whether to support imap... yes
+checking whether to support smb... yes
+checking whether to support smtp... yes
+checking whether to support gopher... yes
+checking whether to support mqtt... yes
+checking whether to provide built-in manual... no
+checking whether to build documentation... no
+checking whether to enable generation of C code... yes
+checking whether to use libgcc... no
+checking if X/Open network library is required... no
+checking for gethostbyname... yes
+checking whether build target is a native Windows one... (cached) no
+checking for proto/bsdsocket.h... no
+checking for connect in libraries... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... yes
+checking for monotonic clock_gettime... yes
+checking for clock_gettime in libraries... no additional lib required
+checking if monotonic clock_gettime works... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for raw monotonic clock_gettime... yes
+checking for zlib.h... yes
+checking for gzread in -lz... yes
+configure: found both libz and libz.h header
+checking whether to enable IPv6... yes
+checking if struct sockaddr_in6 has sin6_scope_id member... yes
+checking if argv can be written to... yes
+checking if GSS-API support is requested... no
+checking whether to enable Windows native SSL/TLS... no
+checking whether to enable Secure Transport... no
+checking whether to enable Amiga native SSL/TLS (AmiSSL v5)... no
+checking for HMAC_Update in -lcrypto... yes
+checking for SSL_connect in -lssl... yes
+checking for openssl/x509.h... yes
+checking for openssl/rsa.h... yes
+checking for openssl/crypto.h... yes
+checking for openssl/pem.h... yes
+checking for openssl/ssl.h... yes
+checking for openssl/err.h... yes
+checking for BoringSSL... no
+checking for AWS-LC... no
+checking for libressl... no
+checking for OpenSSL >= v3... yes
+checking for SSL_set_quic_use_legacy_codepoint... no
+configure: OpenSSL version does not speak QUIC API
+configure: Added /home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib to CURL_LIBRARY_PATH
+checking for "/dev/urandom"... yes
+checking for SRP support in OpenSSL... yes
+checking for QUIC support in OpenSSL... yes
+configure: built with one SSL backend
+checking default CA cert bundle/path... configure: want unset ca /etc/ssl/certs/ca-certificates.crt
+/etc/ssl/certs/ca-certificates.crt
+/etc/ssl/certs (capath)
+checking whether to use builtin CA store of SSL library... no
+checking whether versioned symbols are wanted... no
+checking whether to enable Windows native IDN (Windows native builds only)... no
+checking whether to build with libidn2... no
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/ioctl.h... yes
+checking for unistd.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for arpa/inet.h... yes
+checking for net/if.h... yes
+checking for netinet/in.h... yes
+checking for netinet/in6.h... no
+checking for sys/un.h... yes
+checking for linux/tcp.h... yes
+checking for netinet/tcp.h... yes
+checking for netinet/udp.h... yes
+checking for netdb.h... yes
+checking for sys/sockio.h... no
+checking for sys/stat.h... (cached) yes
+checking for sys/param.h... yes
+checking for termios.h... yes
+checking for termio.h... yes
+checking for fcntl.h... yes
+checking for io.h... no
+checking for pwd.h... yes
+checking for utime.h... yes
+checking for sys/utime.h... no
+checking for sys/poll.h... yes
+checking for poll.h... yes
+checking for socket.h... no
+checking for sys/resource.h... yes
+checking for libgen.h... yes
+checking for locale.h... yes
+checking for stdbool.h... yes
+checking for sys/filio.h... no
+checking for sys/wait.h... yes
+checking for setjmp.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for struct timeval... yes
+checking run-time libs availability... fine
+checking size of size_t... 8
+checking size of long... 8
+checking size of int... 4
+checking size of time_t... 8
+checking size of off_t... 8
+checking size of curl_off_t... 8
+checking size of curl_socket_t... 4
+checking for long long... yes
+checking for ssize_t... yes
+checking for bool... yes
+checking for sa_family_t... yes
+checking for suseconds_t... yes
+checking if time_t is unsigned... no
+checking for in_addr_t... yes
+checking for struct sockaddr_storage... yes
+checking for sys/select.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for select... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for recv... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for send... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for MSG_NOSIGNAL... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking if alarm can be linked... yes
+checking if alarm is prototyped... yes
+checking if alarm is compilable... yes
+checking if alarm usage allowed... yes
+checking if alarm might be used... yes
+checking for sys/types.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for libgen.h... (cached) yes
+checking if basename can be linked... yes
+checking if basename is prototyped... yes
+checking if basename is compilable... yes
+checking if basename usage allowed... yes
+checking if basename might be used... yes
+checking for sys/types.h... (cached) yes
+checking for socket.h... (cached) no
+checking if closesocket can be linked... no
+checking if closesocket might be used... no
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking if CloseSocket can be linked... no
+checking if CloseSocket might be used... no
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for fcntl.h... (cached) yes
+checking if fcntl can be linked... yes
+checking if fcntl is prototyped... yes
+checking if fcntl is compilable... yes
+checking if fcntl usage allowed... yes
+checking if fcntl might be used... yes
+checking if fcntl O_NONBLOCK is compilable... yes
+checking if fcntl O_NONBLOCK usage allowed... yes
+checking if fcntl O_NONBLOCK might be used... yes
+checking whether build target is a native Windows one... (cached) no
+checking for sys/types.h... (cached) yes
+checking for netdb.h... (cached) yes
+checking if freeaddrinfo can be linked... yes
+checking if freeaddrinfo is prototyped... yes
+checking if freeaddrinfo is compilable... yes
+checking if freeaddrinfo usage allowed... yes
+checking if freeaddrinfo might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/xattr.h... yes
+checking if fsetxattr can be linked... yes
+checking if fsetxattr is prototyped... yes
+checking if fsetxattr takes 5 args.... yes
+checking if fsetxattr is compilable... yes
+checking if fsetxattr usage allowed... yes
+checking if fsetxattr might be used... yes
+checking if ftruncate can be linked... yes
+checking if ftruncate is prototyped... yes
+checking if ftruncate is compilable... yes
+checking if ftruncate usage allowed... yes
+checking if ftruncate might be used... yes
+checking for sys/types.h... (cached) yes
+checking if getaddrinfo can be linked... yes
+checking if getaddrinfo is prototyped... yes
+checking if getaddrinfo is compilable... yes
+checking if getaddrinfo seems to work... yes
+checking if getaddrinfo usage allowed... yes
+checking if getaddrinfo might be used... yes
+checking if getaddrinfo is threadsafe... yes
+checking if gethostbyname can be linked... yes
+checking if gethostbyname is prototyped... yes
+checking if gethostbyname is compilable... yes
+checking if gethostbyname usage allowed... yes
+checking if gethostbyname might be used... yes
+checking if gethostbyname_r can be linked... yes
+checking if gethostbyname_r is prototyped... yes
+checking if gethostbyname_r takes 3 args.... no
+checking if gethostbyname_r takes 5 args.... no
+checking if gethostbyname_r takes 6 args.... yes
+checking if gethostbyname_r is compilable... yes
+checking if gethostbyname_r usage allowed... yes
+checking if gethostbyname_r might be used... yes
+checking if gethostname can be linked... yes
+checking if gethostname is prototyped... yes
+checking if gethostname is compilable... yes
+checking for gethostname arg 2 data type... size_t
+checking if gethostname usage allowed... yes
+checking if gethostname might be used... yes
+checking if getpeername can be linked... yes
+checking if getpeername is prototyped... yes
+checking if getpeername is compilable... yes
+checking if getpeername usage allowed... yes
+checking if getpeername might be used... yes
+checking if getsockname can be linked... yes
+checking if getsockname is prototyped... yes
+checking if getsockname is compilable... yes
+checking if getsockname usage allowed... yes
+checking if getsockname might be used... yes
+checking for net/if.h... (cached) yes
+checking if if_nametoindex can be linked... yes
+checking if if_nametoindex is prototyped... yes
+checking if if_nametoindex is compilable... yes
+checking if if_nametoindex usage allowed... yes
+checking if if_nametoindex might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for ifaddrs.h... yes
+checking if getifaddrs can be linked... yes
+checking if getifaddrs is prototyped... yes
+checking if getifaddrs is compilable... yes
+checking if getifaddrs seems to work... yes
+checking if getifaddrs usage allowed... yes
+checking if getifaddrs might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking if gmtime_r can be linked... yes
+checking if gmtime_r is prototyped... yes
+checking if gmtime_r is compilable... yes
+checking if gmtime_r seems to work... yes
+checking if gmtime_r usage allowed... yes
+checking if gmtime_r might be used... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for netinet/in.h... (cached) yes
+checking for arpa/inet.h... (cached) yes
+checking if inet_ntop can be linked... yes
+checking if inet_ntop is prototyped... yes
+checking if inet_ntop is compilable... yes
+checking if inet_ntop seems to work... yes
+checking if inet_ntop usage allowed... yes
+checking if inet_ntop might be used... yes
+checking if inet_pton can be linked... yes
+checking if inet_pton is prototyped... yes
+checking if inet_pton is compilable... yes
+checking if inet_pton seems to work... yes
+checking if inet_pton usage allowed... yes
+checking if inet_pton might be used... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking for sys/ioctl.h... (cached) yes
+checking for stropts.h... no
+checking if ioctl can be linked... yes
+checking if ioctl is prototyped... yes
+checking if ioctl is compilable... yes
+checking if ioctl usage allowed... yes
+checking if ioctl might be used... yes
+checking if ioctl FIONBIO is compilable... yes
+checking if ioctl FIONBIO usage allowed... yes
+checking if ioctl FIONBIO might be used... yes
+checking if ioctl SIOCGIFADDR is compilable... yes
+checking if ioctl SIOCGIFADDR usage allowed... yes
+checking if ioctl SIOCGIFADDR might be used... yes
+checking if ioctlsocket can be linked... no
+checking if ioctlsocket might be used... no
+checking if IoctlSocket can be linked... no
+checking if IoctlSocket might be used... no
+checking if memrchr can be linked... yes
+checking if memrchr is prototyped... no
+checking if memrchr might be used... no
+checking for sys/types.h... (cached) yes
+checking for poll.h... (cached) yes
+checking for sys/poll.h... (cached) yes
+checking if poll can be linked... yes
+checking if poll is prototyped... yes
+checking if poll is compilable... yes
+checking if poll seems to work... yes
+checking if poll usage allowed... yes
+checking if poll might be used... yes
+checking for sys/types.h... (cached) yes
+checking if sigaction can be linked... yes
+checking if sigaction is prototyped... yes
+checking if sigaction is compilable... yes
+checking if sigaction usage allowed... yes
+checking if sigaction might be used... yes
+checking if siginterrupt can be linked... yes
+checking if siginterrupt is prototyped... yes
+checking if siginterrupt is compilable... yes
+checking if siginterrupt usage allowed... yes
+checking if siginterrupt might be used... yes
+checking if signal can be linked... yes
+checking if signal is prototyped... yes
+checking if signal is compilable... yes
+checking if signal usage allowed... yes
+checking if signal might be used... yes
+checking for sys/types.h... (cached) yes
+checking if sigsetjmp can be linked... no
+checking if sigsetjmp seems a macro... yes
+checking if sigsetjmp is compilable... yes
+checking if sigsetjmp usage allowed... yes
+checking if sigsetjmp might be used... yes
+checking if socket can be linked... yes
+checking if socket is prototyped... yes
+checking if socket is compilable... yes
+checking if socket usage allowed... yes
+checking if socket might be used... yes
+checking if socketpair can be linked... yes
+checking if socketpair is prototyped... yes
+checking if socketpair is compilable... yes
+checking if socketpair usage allowed... yes
+checking if socketpair might be used... yes
+checking if strcasecmp can be linked... yes
+checking if strcasecmp is prototyped... yes
+checking if strcasecmp is compilable... yes
+checking if strcasecmp usage allowed... yes
+checking if strcasecmp might be used... yes
+checking if strcmpi can be linked... no
+checking if strcmpi might be used... no
+checking if strdup can be linked... yes
+checking if strdup is prototyped... yes
+checking if strdup is compilable... yes
+checking if strdup usage allowed... yes
+checking if strdup might be used... yes
+checking if strerror_r can be linked... yes
+checking if strerror_r is prototyped... yes
+checking if strerror_r is compilable... yes
+checking if strerror_r is glibc like... no
+checking if strerror_r is POSIX like... yes
+checking if strerror_r seems to work... yes
+checking if strerror_r usage allowed... yes
+checking if strerror_r might be used... yes
+checking if stricmp can be linked... no
+checking if stricmp might be used... no
+checking if strtok_r can be linked... yes
+checking if strtok_r is prototyped... yes
+checking if strtok_r is compilable... yes
+checking if strtok_r usage allowed... yes
+checking if strtok_r might be used... yes
+checking if strtoll can be linked... yes
+checking if strtoll is prototyped... yes
+checking if strtoll is compilable... yes
+checking if strtoll usage allowed... yes
+checking if strtoll might be used... yes
+checking for /usr/bin/cc options needed to detect all undeclared functions... none needed
+checking whether getpwuid_r is declared... yes
+checking for _fseeki64... no
+checking deeper for _fseeki64... but still no
+checking for arc4random... yes
+checking for fnmatch... yes
+checking for fseeko... yes
+checking for geteuid... yes
+checking for getpass_r... no
+checking deeper for getpass_r... but still no
+checking for getppid... yes
+checking for getpwuid... yes
+checking for getpwuid_r... yes
+checking for getrlimit... yes
+checking for gettimeofday... yes
+checking for if_nametoindex... yes
+checking for mach_absolute_time... no
+checking deeper for mach_absolute_time... but still no
+checking for pipe... yes
+checking for sched_yield... yes
+checking for sendmsg... yes
+checking for setlocale... yes
+checking for setmode... no
+checking deeper for setmode... but still no
+checking for setrlimit... yes
+checking for snprintf... yes
+checking for utime... yes
+checking for utimes... yes
+checking whether fseeko is declared... yes
+checking how to set a socket into non-blocking mode... fcntl O_NONBLOCK
+checking whether to enable the threaded resolver... yes
+checking whether to use POSIX threads for threaded resolver... auto
+checking for pthread.h... yes
+checking for pthread_create... yes
+checking for dirent.h... yes
+checking for opendir... yes
+checking convert -I options to -isystem... yes
+checking whether to enable verbose strings... yes
+checking whether to enable SSPI support (Windows native builds only)... no
+checking whether to enable basic authentication method... yes
+checking whether to enable bearer authentication method... yes
+checking whether to enable digest authentication method... yes
+checking whether to enable kerberos authentication method... yes
+checking whether to enable negotiate authentication method... yes
+checking whether to enable aws sig methods... yes
+checking whether to support NTLM... yes
+checking whether to enable TLS-SRP authentication... yes
+checking whether to enable Unix domain sockets... yes
+checking for struct sockaddr_un.sun_path... yes
+checking whether to support cookies... yes
+checking whether to support socketpair... yes
+checking whether to support HTTP authentication... yes
+checking whether to support DoH... yes
+checking whether to support the MIME API... yes
+checking whether to support binding connections locally... yes
+checking whether to support the form API... yes
+checking whether to support date parsing... yes
+checking whether to support netrc parsing... yes
+checking whether to support progress-meter... yes
+checking whether to support DNS shuffling... yes
+checking whether to support curl_easy_option*... yes
+checking whether to support alt-svc... yes
+checking whether to support headers-api... yes
+checking whether to support HSTS... yes
+checking for SSL_set0_wbio... yes
+checking whether to support WebSockets... no
+checking whether hiding of library internal symbols will actually happen... no
+checking if this build supports HTTPS-proxy... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/examples/Makefile
+config.status: creating docs/libcurl/Makefile
+config.status: creating docs/libcurl/opts/Makefile
+config.status: creating docs/cmdline-opts/Makefile
+config.status: creating include/Makefile
+config.status: creating include/curl/Makefile
+config.status: creating src/Makefile
+config.status: creating lib/Makefile
+config.status: creating scripts/Makefile
+config.status: creating lib/libcurl.vers
+config.status: creating tests/Makefile
+config.status: creating tests/config
+config.status: creating tests/certs/Makefile
+config.status: creating tests/certs/scripts/Makefile
+config.status: creating tests/data/Makefile
+config.status: creating tests/server/Makefile
+config.status: creating tests/libtest/Makefile
+config.status: creating tests/unit/Makefile
+config.status: creating tests/http/config.ini
+config.status: creating tests/http/Makefile
+config.status: creating tests/http/clients/Makefile
+config.status: creating packages/Makefile
+config.status: creating packages/vms/Makefile
+config.status: creating curl-config
+config.status: creating libcurl.pc
+config.status: creating lib/curl_config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: Configured to build curl/libcurl:
+
+  Host setup:       x86_64-pc-linux-gnu
+  Install prefix:   /
+  Compiler:         /usr/bin/cc
+   CFLAGS:          -m64 -fPIC -g -Werror-implicit-function-declaration -g -O0 -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wattributes -Wdiv-by-zero -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wunreachable-code -Wunused-parameter -Wpragmas -Wredundant-decls -Wcast-align -Waddress -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wtrampolines -Wsign-conversion -Wno-error=sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough -Warith-conversion -Wenum-conversion -Wno-system-headers
+   CPPFLAGS:        -isystem /home/alex/.conan2/p/b/openscc38e2e8a963d/p/include -isystem /home/alex/.conan2/p/b/zlib11781dd5b91c3/p/include -isystem /home/alex/.conan2/p/b/zlib11781dd5b91c3/p/include -isystem /home/alex/.conan2/p/b/openscc38e2e8a963d/p/include
+   LDFLAGS:         -m64 -L/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib -L/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib -L/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib -L/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib
+   LIBS:            -lssl -lcrypto -lz -lssl -lcrypto -lz -ldl -lpthread -lrt
+
+  curl version:     8.8.0
+  SSL:              enabled (OpenSSL v3+)
+  SSH:              no      (--with-{libssh,libssh2})
+  zlib:             enabled
+  brotli:           no      (--with-brotli)
+  zstd:             no      (--with-zstd)
+  GSS-API:          no      (--with-gssapi)
+  GSASL:            no      (--with-gsasl)
+  TLS-SRP:          enabled
+  resolver:         POSIX threaded
+  IPv6:             enabled
+  Unix sockets:     enabled
+  IDN:              no      (--with-{libidn2,winidn})
+  Build docs:       no
+  Build libcurl:    Shared=no, Static=yes
+  Built-in manual:  no      (--enable-manual)
+  --libcurl option: enabled (--disable-libcurl-option)
+  Verbose errors:   enabled (--disable-verbose)
+  Code coverage:    disabled
+  SSPI:             no      (--enable-sspi)
+  ca cert bundle:   /etc/ssl/certs/ca-certificates.crt
+  ca cert path:     /etc/ssl/certs
+  ca fallback:      no
+  LDAP:             no      (--enable-ldap / --with-ldap-lib / --with-lber-lib)
+  LDAPS:            no      (--enable-ldaps)
+  RTSP:             enabled
+  RTMP:             no      (--with-librtmp)
+  PSL:              no      (--with-libpsl)
+  Alt-svc:          enabled (--disable-alt-svc)
+  Headers API:      enabled (--disable-headers-api)
+  HSTS:             enabled (--disable-hsts)
+  HTTP1:            enabled (internal)
+  HTTP2:            no      (--with-nghttp2)
+  HTTP3:            no      (--with-ngtcp2 --with-nghttp3, --with-quiche, --with-openssl-quic, --with-msh3)
+  ECH:              no      (--enable-ech)
+  WebSockets:       no      (--enable-websockets)
+  Protocols:        DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS IPFS IPNS MQTT POP3 POP3S RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+  Features:         AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz threadsafe
+
+  WARNING: A selected TLS library (schannel, Secure-Transport, OpenSSL) does not support TLS 1.3!
+
+libcurl/8.8.0: RUN: make -j12
+Making all in lib
+make[1]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+make  all-am
+make[2]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+  CC       libcurl_la-altsvc.lo
+  CC       libcurl_la-amigaos.lo
+  CC       libcurl_la-asyn-ares.lo
+  CC       libcurl_la-asyn-thread.lo
+  CC       libcurl_la-base64.lo
+  CC       libcurl_la-bufq.lo
+  CC       libcurl_la-bufref.lo
+  CC       libcurl_la-c-hyper.lo
+  CC       libcurl_la-cf-h1-proxy.lo
+  CC       libcurl_la-cf-h2-proxy.lo
+  CC       libcurl_la-cf-haproxy.lo
+  CC       libcurl_la-cf-https-connect.lo
+  CC       libcurl_la-cf-socket.lo
+  CC       libcurl_la-cfilters.lo
+  CC       libcurl_la-conncache.lo
+  CC       libcurl_la-connect.lo
+  CC       libcurl_la-content_encoding.lo
+  CC       libcurl_la-cookie.lo
+  CC       libcurl_la-curl_addrinfo.lo
+  CC       libcurl_la-curl_des.lo
+  CC       libcurl_la-curl_endian.lo
+  CC       libcurl_la-curl_fnmatch.lo
+  CC       libcurl_la-curl_get_line.lo
+  CC       libcurl_la-curl_gethostname.lo
+  CC       libcurl_la-curl_gssapi.lo
+  CC       libcurl_la-curl_memrchr.lo
+  CC       libcurl_la-curl_multibyte.lo
+  CC       libcurl_la-curl_ntlm_core.lo
+  CC       libcurl_la-curl_path.lo
+  CC       libcurl_la-curl_range.lo
+  CC       libcurl_la-curl_rtmp.lo
+  CC       libcurl_la-curl_sasl.lo
+  CC       libcurl_la-curl_sha512_256.lo
+  CC       libcurl_la-curl_sspi.lo
+  CC       libcurl_la-curl_threads.lo
+  CC       libcurl_la-curl_trc.lo
+  CC       libcurl_la-cw-out.lo
+  CC       libcurl_la-dict.lo
+  CC       libcurl_la-dllmain.lo
+  CC       libcurl_la-doh.lo
+  CC       libcurl_la-dynbuf.lo
+  CC       libcurl_la-dynhds.lo
+  CC       libcurl_la-easy.lo
+  CC       libcurl_la-easygetopt.lo
+  CC       libcurl_la-escape.lo
+  CC       libcurl_la-easyoptions.lo
+  CC       libcurl_la-file.lo
+  CC       libcurl_la-fileinfo.lo
+  CC       libcurl_la-fopen.lo
+  CC       libcurl_la-formdata.lo
+  CC       libcurl_la-ftp.lo
+  CC       libcurl_la-ftplistparser.lo
+  CC       libcurl_la-getenv.lo
+  CC       libcurl_la-getinfo.lo
+  CC       libcurl_la-gopher.lo
+  CC       libcurl_la-hash.lo
+  CC       libcurl_la-headers.lo
+  CC       libcurl_la-hmac.lo
+  CC       libcurl_la-hostasyn.lo
+  CC       libcurl_la-hostip.lo
+  CC       libcurl_la-hostip4.lo
+  CC       libcurl_la-hostip6.lo
+  CC       libcurl_la-hostsyn.lo
+  CC       libcurl_la-hsts.lo
+  CC       libcurl_la-http.lo
+  CC       libcurl_la-http1.lo
+  CC       libcurl_la-http2.lo
+  CC       libcurl_la-http_aws_sigv4.lo
+  CC       libcurl_la-http_chunks.lo
+  CC       libcurl_la-http_digest.lo
+  CC       libcurl_la-http_negotiate.lo
+  CC       libcurl_la-http_ntlm.lo
+  CC       libcurl_la-http_proxy.lo
+  CC       libcurl_la-idn.lo
+  CC       libcurl_la-if2ip.lo
+  CC       libcurl_la-imap.lo
+  CC       libcurl_la-inet_ntop.lo
+  CC       libcurl_la-inet_pton.lo
+  CC       libcurl_la-krb5.lo
+  CC       libcurl_la-ldap.lo
+  CC       libcurl_la-llist.lo
+  CC       libcurl_la-macos.lo
+  CC       libcurl_la-md4.lo
+  CC       libcurl_la-md5.lo
+  CC       libcurl_la-memdebug.lo
+  CC       libcurl_la-mime.lo
+  CC       libcurl_la-mprintf.lo
+  CC       libcurl_la-mqtt.lo
+  CC       libcurl_la-multi.lo
+  CC       libcurl_la-netrc.lo
+  CC       libcurl_la-nonblock.lo
+  CC       libcurl_la-noproxy.lo
+  CC       libcurl_la-openldap.lo
+  CC       libcurl_la-parsedate.lo
+  CC       libcurl_la-pingpong.lo
+  CC       libcurl_la-pop3.lo
+  CC       libcurl_la-progress.lo
+  CC       libcurl_la-psl.lo
+  CC       libcurl_la-rand.lo
+  CC       libcurl_la-rename.lo
+  CC       libcurl_la-request.lo
+  CC       libcurl_la-rtsp.lo
+  CC       libcurl_la-select.lo
+  CC       libcurl_la-sendf.lo
+  CC       libcurl_la-setopt.lo
+  CC       libcurl_la-sha256.lo
+  CC       libcurl_la-share.lo
+  CC       libcurl_la-slist.lo
+  CC       libcurl_la-smb.lo
+  CC       libcurl_la-smtp.lo
+  CC       libcurl_la-socketpair.lo
+  CC       libcurl_la-socks.lo
+  CC       libcurl_la-socks_gssapi.lo
+  CC       libcurl_la-socks_sspi.lo
+  CC       libcurl_la-speedcheck.lo
+  CC       libcurl_la-splay.lo
+  CC       libcurl_la-strcase.lo
+  CC       libcurl_la-strdup.lo
+  CC       libcurl_la-strerror.lo
+  CC       libcurl_la-strtok.lo
+  CC       libcurl_la-strtoofft.lo
+  CC       libcurl_la-system_win32.lo
+  CC       libcurl_la-tftp.lo
+  CC       libcurl_la-telnet.lo
+  CC       libcurl_la-timediff.lo
+  CC       libcurl_la-timeval.lo
+  CC       libcurl_la-transfer.lo
+  CC       libcurl_la-url.lo
+  CC       libcurl_la-urlapi.lo
+  CC       libcurl_la-version.lo
+  CC       libcurl_la-version_win32.lo
+  CC       libcurl_la-warnless.lo
+  CC       libcurl_la-ws.lo
+  CC       libcurlu_la-altsvc.lo
+  CC       libcurlu_la-amigaos.lo
+  CC       libcurlu_la-asyn-ares.lo
+  CC       libcurlu_la-asyn-thread.lo
+  CC       libcurlu_la-base64.lo
+  CC       libcurlu_la-bufq.lo
+  CC       libcurlu_la-bufref.lo
+  CC       libcurlu_la-c-hyper.lo
+  CC       libcurlu_la-cf-h2-proxy.lo
+  CC       libcurlu_la-cf-h1-proxy.lo
+  CC       libcurlu_la-cf-haproxy.lo
+  CC       libcurlu_la-cf-https-connect.lo
+  CC       libcurlu_la-cf-socket.lo
+  CC       libcurlu_la-cfilters.lo
+  CC       libcurlu_la-conncache.lo
+  CC       libcurlu_la-connect.lo
+  CC       libcurlu_la-content_encoding.lo
+  CC       libcurlu_la-cookie.lo
+  CC       libcurlu_la-curl_addrinfo.lo
+  CC       libcurlu_la-curl_des.lo
+  CC       libcurlu_la-curl_endian.lo
+  CC       libcurlu_la-curl_fnmatch.lo
+  CC       libcurlu_la-curl_get_line.lo
+  CC       libcurlu_la-curl_gethostname.lo
+  CC       libcurlu_la-curl_gssapi.lo
+  CC       libcurlu_la-curl_memrchr.lo
+  CC       libcurlu_la-curl_multibyte.lo
+  CC       libcurlu_la-curl_ntlm_core.lo
+  CC       libcurlu_la-curl_path.lo
+  CC       libcurlu_la-curl_range.lo
+  CC       libcurlu_la-curl_rtmp.lo
+  CC       libcurlu_la-curl_sasl.lo
+  CC       libcurlu_la-curl_sha512_256.lo
+  CC       libcurlu_la-curl_sspi.lo
+  CC       libcurlu_la-curl_threads.lo
+  CC       libcurlu_la-cw-out.lo
+  CC       libcurlu_la-curl_trc.lo
+  CC       libcurlu_la-dict.lo
+  CC       libcurlu_la-dllmain.lo
+  CC       libcurlu_la-doh.lo
+  CC       libcurlu_la-dynbuf.lo
+  CC       libcurlu_la-dynhds.lo
+  CC       libcurlu_la-easy.lo
+  CC       libcurlu_la-easygetopt.lo
+  CC       libcurlu_la-easyoptions.lo
+  CC       libcurlu_la-escape.lo
+  CC       libcurlu_la-file.lo
+  CC       libcurlu_la-fileinfo.lo
+  CC       libcurlu_la-fopen.lo
+  CC       libcurlu_la-formdata.lo
+  CC       libcurlu_la-ftp.lo
+  CC       libcurlu_la-ftplistparser.lo
+  CC       libcurlu_la-getenv.lo
+  CC       libcurlu_la-getinfo.lo
+  CC       libcurlu_la-gopher.lo
+  CC       libcurlu_la-hash.lo
+  CC       libcurlu_la-headers.lo
+  CC       libcurlu_la-hmac.lo
+  CC       libcurlu_la-hostasyn.lo
+  CC       libcurlu_la-hostip.lo
+  CC       libcurlu_la-hostip4.lo
+  CC       libcurlu_la-hostip6.lo
+  CC       libcurlu_la-hostsyn.lo
+  CC       libcurlu_la-hsts.lo
+  CC       libcurlu_la-http.lo
+  CC       libcurlu_la-http1.lo
+  CC       libcurlu_la-http2.lo
+  CC       libcurlu_la-http_aws_sigv4.lo
+  CC       libcurlu_la-http_chunks.lo
+  CC       libcurlu_la-http_digest.lo
+  CC       libcurlu_la-http_negotiate.lo
+  CC       libcurlu_la-http_ntlm.lo
+  CC       libcurlu_la-idn.lo
+  CC       libcurlu_la-http_proxy.lo
+  CC       libcurlu_la-if2ip.lo
+  CC       libcurlu_la-imap.lo
+  CC       libcurlu_la-inet_ntop.lo
+  CC       libcurlu_la-inet_pton.lo
+  CC       libcurlu_la-krb5.lo
+  CC       libcurlu_la-ldap.lo
+  CC       libcurlu_la-llist.lo
+  CC       libcurlu_la-macos.lo
+  CC       libcurlu_la-md4.lo
+  CC       libcurlu_la-memdebug.lo
+  CC       libcurlu_la-md5.lo
+  CC       libcurlu_la-mime.lo
+  CC       libcurlu_la-mprintf.lo
+  CC       libcurlu_la-mqtt.lo
+  CC       libcurlu_la-multi.lo
+  CC       libcurlu_la-netrc.lo
+  CC       libcurlu_la-nonblock.lo
+  CC       libcurlu_la-noproxy.lo
+  CC       libcurlu_la-openldap.lo
+  CC       libcurlu_la-parsedate.lo
+  CC       libcurlu_la-pingpong.lo
+  CC       libcurlu_la-pop3.lo
+  CC       libcurlu_la-progress.lo
+  CC       libcurlu_la-psl.lo
+  CC       libcurlu_la-rand.lo
+  CC       libcurlu_la-rename.lo
+  CC       libcurlu_la-request.lo
+  CC       libcurlu_la-rtsp.lo
+  CC       libcurlu_la-select.lo
+  CC       libcurlu_la-sendf.lo
+  CC       libcurlu_la-setopt.lo
+  CC       libcurlu_la-sha256.lo
+  CC       libcurlu_la-share.lo
+  CC       libcurlu_la-slist.lo
+  CC       libcurlu_la-smb.lo
+  CC       libcurlu_la-smtp.lo
+  CC       libcurlu_la-socketpair.lo
+  CC       libcurlu_la-socks.lo
+  CC       libcurlu_la-socks_gssapi.lo
+  CC       libcurlu_la-socks_sspi.lo
+  CC       libcurlu_la-speedcheck.lo
+  CC       libcurlu_la-splay.lo
+  CC       libcurlu_la-strcase.lo
+  CC       libcurlu_la-strdup.lo
+  CC       libcurlu_la-strerror.lo
+  CC       libcurlu_la-strtok.lo
+  CC       libcurlu_la-strtoofft.lo
+  CC       libcurlu_la-system_win32.lo
+  CC       libcurlu_la-telnet.lo
+  CC       libcurlu_la-tftp.lo
+  CC       libcurlu_la-timediff.lo
+  CC       libcurlu_la-timeval.lo
+  CC       libcurlu_la-transfer.lo
+  CC       libcurlu_la-url.lo
+  CC       libcurlu_la-urlapi.lo
+  CC       libcurlu_la-version.lo
+  CC       libcurlu_la-version_win32.lo
+  CC       libcurlu_la-warnless.lo
+  CC       libcurlu_la-ws.lo
+  CC       vauth/libcurlu_la-cleartext.lo
+  CC       vauth/libcurlu_la-cram.lo
+  CC       vauth/libcurlu_la-digest.lo
+  CC       vauth/libcurlu_la-digest_sspi.lo
+  CC       vauth/libcurlu_la-gsasl.lo
+  CC       vauth/libcurlu_la-krb5_gssapi.lo
+  CC       vauth/libcurlu_la-krb5_sspi.lo
+  CC       vauth/libcurlu_la-ntlm.lo
+  CC       vauth/libcurlu_la-ntlm_sspi.lo
+  CC       vauth/libcurlu_la-oauth2.lo
+  CC       vauth/libcurlu_la-spnego_gssapi.lo
+  CC       vauth/libcurlu_la-spnego_sspi.lo
+  CC       vauth/libcurlu_la-vauth.lo
+  CC       vtls/libcurlu_la-bearssl.lo
+  CC       vtls/libcurlu_la-cipher_suite.lo
+  CC       vtls/libcurlu_la-gtls.lo
+  CC       vtls/libcurlu_la-hostcheck.lo
+  CC       vtls/libcurlu_la-keylog.lo
+  CC       vtls/libcurlu_la-mbedtls.lo
+  CC       vtls/libcurlu_la-mbedtls_threadlock.lo
+  CC       vtls/libcurlu_la-openssl.lo
+  CC       vtls/libcurlu_la-rustls.lo
+  CC       vtls/libcurlu_la-schannel.lo
+  CC       vtls/libcurlu_la-schannel_verify.lo
+  CC       vtls/libcurlu_la-sectransp.lo
+  CC       vtls/libcurlu_la-vtls.lo
+  CC       vtls/libcurlu_la-wolfssl.lo
+  CC       vtls/libcurlu_la-x509asn1.lo
+  CC       vquic/libcurlu_la-curl_msh3.lo
+  CC       vquic/libcurlu_la-curl_ngtcp2.lo
+  CC       vquic/libcurlu_la-curl_osslq.lo
+  CC       vquic/libcurlu_la-curl_quiche.lo
+  CC       vquic/libcurlu_la-vquic.lo
+  CC       vquic/libcurlu_la-vquic-tls.lo
+  CC       vssh/libcurlu_la-libssh.lo
+  CC       vssh/libcurlu_la-libssh2.lo
+  CC       vssh/libcurlu_la-wolfssh.lo
+  RUN      checksrc
+  CC       vauth/libcurl_la-cleartext.lo
+  CC       vauth/libcurl_la-cram.lo
+  CC       vauth/libcurl_la-digest.lo
+  CC       vauth/libcurl_la-digest_sspi.lo
+  CC       vauth/libcurl_la-gsasl.lo
+  CC       vauth/libcurl_la-krb5_gssapi.lo
+  CC       vauth/libcurl_la-krb5_sspi.lo
+  CC       vauth/libcurl_la-ntlm.lo
+  CC       vauth/libcurl_la-ntlm_sspi.lo
+  CC       vauth/libcurl_la-oauth2.lo
+  CC       vauth/libcurl_la-spnego_gssapi.lo
+  CC       vauth/libcurl_la-spnego_sspi.lo
+  CC       vauth/libcurl_la-vauth.lo
+  CC       vtls/libcurl_la-bearssl.lo
+  CC       vtls/libcurl_la-cipher_suite.lo
+  CC       vtls/libcurl_la-gtls.lo
+  CC       vtls/libcurl_la-hostcheck.lo
+  CC       vtls/libcurl_la-keylog.lo
+  CC       vtls/libcurl_la-mbedtls.lo
+  CC       vtls/libcurl_la-mbedtls_threadlock.lo
+  CC       vtls/libcurl_la-openssl.lo
+  CC       vtls/libcurl_la-rustls.lo
+  CC       vtls/libcurl_la-schannel.lo
+  CC       vtls/libcurl_la-schannel_verify.lo
+  CC       vtls/libcurl_la-sectransp.lo
+  CC       vtls/libcurl_la-vtls.lo
+  CC       vtls/libcurl_la-wolfssl.lo
+  CC       vtls/libcurl_la-x509asn1.lo
+  CC       vquic/libcurl_la-curl_msh3.lo
+  CC       vquic/libcurl_la-curl_ngtcp2.lo
+  CC       vquic/libcurl_la-curl_osslq.lo
+  CC       vquic/libcurl_la-curl_quiche.lo
+  CC       vquic/libcurl_la-vquic.lo
+  CC       vquic/libcurl_la-vquic-tls.lo
+  CC       vssh/libcurl_la-libssh.lo
+  CC       vssh/libcurl_la-libssh2.lo
+  CC       vssh/libcurl_la-wolfssh.lo
+  CCLD     libcurlu.la
+  CCLD     libcurl.la
+make[2]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+make[1]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+make[1]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+
+libcurl/8.8.0: Package '3b8f43bb1ada3c8e2c1f1305688a6bda59ef87d8' built
+libcurl/8.8.0: Build folder /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug
+libcurl/8.8.0: Generating the package
+libcurl/8.8.0: Packaging in folder /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p
+libcurl/8.8.0: Calling package()
+libcurl/8.8.0: RUN: make install DESTDIR=/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p -j12
+Making install in lib
+make[1]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+  RUN      checksrc
+make[2]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+make[2]: Nothing to be done for 'install-data-am'.
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libcurl.la '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib'
+libtool: install: /usr/bin/install -c .libs/libcurl.lai /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib/libcurl.la
+libtool: install: /usr/bin/install -c .libs/libcurl.a /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib/libcurl.a
+libtool: install: chmod 644 /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib/libcurl.a
+libtool: install: ranlib /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib/libcurl.a
+libtool: warning: remember to run 'libtool --finish //lib'
+make[2]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+make[1]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/lib'
+make[1]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+make[2]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//bin'
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib/pkgconfig'
+ /usr/bin/install -c -m 644 libcurl.pc '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//lib/pkgconfig'
+ /usr/bin/install -c curl-config '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//bin'
+make  install-data-hook
+make[3]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+(cd include && make install)
+make[4]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include'
+Making install in curl
+make[5]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include/curl'
+  RUN      checksrc
+make[6]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include/curl'
+make[6]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//include/curl'
+ /usr/bin/install -c -m 644 /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/curl.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/curlver.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/easy.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/mprintf.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/stdcheaders.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/multi.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/typecheck-gcc.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/system.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/urlapi.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/options.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/header.h /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/include/curl/websockets.h '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//include/curl'
+make[6]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include/curl'
+make[5]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include/curl'
+make[5]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include'
+make[6]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Nothing to be done for 'install-data-am'.
+make[6]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include'
+make[5]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include'
+make[4]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/include'
+(cd docs && make install)
+make[4]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs'
+Making install in .
+make[5]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs'
+make[6]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Nothing to be done for 'install-data-am'.
+make[6]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs'
+make[5]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs'
+Making install in cmdline-opts
+make[5]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/cmdline-opts'
+make[6]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/cmdline-opts'
+make[6]: Nothing to be done for 'install-exec-am'.
+make[6]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/cmdline-opts'
+make[5]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/cmdline-opts'
+Making install in libcurl
+make[5]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl'
+Making install in opts
+make[6]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl/opts'
+make[7]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl/opts'
+make[7]: Nothing to be done for 'install-exec-am'.
+make[7]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl/opts'
+make[6]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl/opts'
+make[6]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl'
+make[7]: Entering directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl'
+make[7]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//share/aclocal'
+ /usr/bin/install -c -m 644 /home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/src/docs/libcurl/libcurl.m4 '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p//share/aclocal'
+make[7]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl'
+make[6]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl'
+make[5]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs/libcurl'
+make[4]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug/docs'
+make[3]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+make[2]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+make[1]: Leaving directory '/home/alex/.conan2/p/b/libcufe3d7a6edc62f/b/build-debug'
+
+libcurl/8.8.0: package(): Packaged 2 files: curl-config, COPYING
+libcurl/8.8.0: package(): Packaged 1 '.a' file: libcurl.a
+libcurl/8.8.0: package(): Packaged 12 '.h' files
+libcurl/8.8.0: package(): Packaged 1 '.pem' file: cacert.pem
+libcurl/8.8.0: Created package revision 14268924cae26818ccf11c57073657b4
+libcurl/8.8.0: Package '3b8f43bb1ada3c8e2c1f1305688a6bda59ef87d8' created
+libcurl/8.8.0: Full package reference: libcurl/8.8.0#9170903d66d6f6e6795fbb566a403129:3b8f43bb1ada3c8e2c1f1305688a6bda59ef87d8#14268924cae26818ccf11c57073657b4
+libcurl/8.8.0: Package folder /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p
 WARN: deprecated: Usage of deprecated Conan 1.X features that will be removed in Conan 2.X:
-WARN: deprecated:     'cpp_info.names' used in: bzip2/1.0.8, zlib/1.3.1, boost/1.83.0, openssl/3.2.2
+WARN: deprecated:     'cpp_info.names' used in: zlib/1.3.1, bzip2/1.0.8, libcurl/8.8.0, boost/1.83.0, openssl/3.2.2
 WARN: deprecated:     'cpp_info.build_modules' used in: bzip2/1.0.8, openssl/3.2.2
-WARN: deprecated:     'env_info' used in: bzip2/1.0.8, boost/1.83.0, openssl/3.2.2
+WARN: deprecated:     'env_info' used in: libtool/2.4.7, bzip2/1.0.8, boost/1.83.0, autoconf/2.71, openssl/3.2.2, gnu-config/cci.20210814, pkgconf/2.1.0, automake/1.16.5, m4/1.4.19
+WARN: deprecated:     'user_info' used in: automake/1.16.5, gnu-config/cci.20210814, boost/1.83.0
 WARN: deprecated:     'cpp_info.filenames' used in: boost/1.83.0
-WARN: deprecated:     'user_info' used in: boost/1.83.0
 
 ======== Finalizing install (deploy, generators) ========
 conanfile.py: Writing generators to /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
 conanfile.py: Generator 'CMakeDeps' calling 'generate()'
 conanfile.py: CMakeDeps necessary find_package() and targets for your CMakeLists.txt
+    find_package(CURL)
     find_package(cpprestsdk)
     find_package(Boost)
-    target_link_libraries(... cpprestsdk::cpprestsdk boost::boost)
+    target_link_libraries(... CURL::libcurl cpprestsdk::cpprestsdk boost::boost)
 conanfile.py: Calling generate()
 conanfile.py: Generators folder: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
 conanfile.py: CMakeToolchain generated: conan_toolchain.cmake
@@ -197,6 +1786,8 @@ Install finished successfully
 -- CMake-Conan: find_package(libbacktrace) found, 'conan install' already ran
 -- Conan: Target declared 'libbacktrace::libbacktrace'
 -- CMake-Conan: find_package(Boost) found, 'conan install' already ran
--- Configuring done (2.7s)
+-- CMake-Conan: find_package(CURL) found, 'conan install' already ran
+-- Conan: Component target declared 'CURL::libcurl'
+-- Configuring done (81.8s)
 -- Generating done (0.1s)
 -- Build files have been written to: /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug

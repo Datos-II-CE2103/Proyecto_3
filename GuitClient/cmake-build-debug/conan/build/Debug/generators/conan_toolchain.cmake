@@ -94,9 +94,9 @@ list(PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
 list(PREPEND CMAKE_PREFIX_PATH "/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/cmake")
 # The Conan local "generators" folder, where this toolchain is saved.
 list(PREPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR} )
-list(PREPEND CMAKE_LIBRARY_PATH "/home/alex/.conan2/p/b/cppre392ba417172d2/p/lib" "/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib" "/home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib" "/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib" "/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib" "/home/alex/.conan2/p/b/libba475828ab0a986/p/lib")
-list(PREPEND CMAKE_INCLUDE_PATH "/home/alex/.conan2/p/b/cppre392ba417172d2/p/include" "/home/alex/.conan2/p/webso7a47c7731495b/p/include" "/home/alex/.conan2/p/b/openscc38e2e8a963d/p/include" "/home/alex/.conan2/p/b/boost2ef007b40ad77/p/include" "/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/include" "/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/include" "/home/alex/.conan2/p/b/libba475828ab0a986/p/include")
-set(CONAN_RUNTIME_LIB_DIRS "/home/alex/.conan2/p/b/cppre392ba417172d2/p/lib" "/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib" "/home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib" "/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib" "/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib" "/home/alex/.conan2/p/b/libba475828ab0a986/p/lib" )
+list(PREPEND CMAKE_LIBRARY_PATH "/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/lib" "/home/alex/.conan2/p/b/cppre392ba417172d2/p/lib" "/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib" "/home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib" "/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib" "/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib" "/home/alex/.conan2/p/b/libba475828ab0a986/p/lib")
+list(PREPEND CMAKE_INCLUDE_PATH "/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include" "/home/alex/.conan2/p/b/cppre392ba417172d2/p/include" "/home/alex/.conan2/p/webso7a47c7731495b/p/include" "/home/alex/.conan2/p/b/openscc38e2e8a963d/p/include" "/home/alex/.conan2/p/b/boost2ef007b40ad77/p/include" "/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/include" "/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/include" "/home/alex/.conan2/p/b/libba475828ab0a986/p/include")
+set(CONAN_RUNTIME_LIB_DIRS "/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/lib" "/home/alex/.conan2/p/b/cppre392ba417172d2/p/lib" "/home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib" "/home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib" "/home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib" "/home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib" "/home/alex/.conan2/p/b/libba475828ab0a986/p/lib" )
 
 
 

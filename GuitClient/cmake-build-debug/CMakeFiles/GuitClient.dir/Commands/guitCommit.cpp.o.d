@@ -995,4 +995,15 @@ CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o: \
  /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
  /usr/include/c++/13/unordered_set \
- /usr/include/c++/13/bits/unordered_set.h
+ /usr/include/c++/13/bits/unordered_set.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curl.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curlver.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/system.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/easy.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/multi.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/curl.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/urlapi.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/options.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/header.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/websockets.h \
+ /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include/curl/mprintf.h

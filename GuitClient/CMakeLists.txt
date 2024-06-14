@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(cpprestsdk REQUIRED)
 find_package(Boost)
+find_package(CURL)
 add_executable(GuitClient main.cpp
         Commands/Command.cpp
         Commands/Command.h
@@ -29,3 +30,4 @@ add_executable(GuitClient main.cpp
 
 target_link_libraries(GuitClient cpprestsdk::cpprestsdk)
 target_link_libraries(GuitClient boost::boost)
+target_link_libraries(GuitClient CURL::libcurl)

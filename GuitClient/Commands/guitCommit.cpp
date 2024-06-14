@@ -1,17 +1,12 @@
 #include "guitCommit.h"
 #include "../Managers/NetworkManager.h"
 #include "../Managers/DirectoryManager.h"  // Incluir DirectoryManager para reutilizar readIndex
-#include <cpprest/http_client.h>
-#include <cpprest/filestream.h>
-#include <cpprest/json.h>
-#include <cpprest/uri.h>
-#include <cpprest/asyncrt_utils.h>
+#include <curl/curl.h>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <unordered_set>
-#include <vector>
 
 void guitCommit(const std::string& mensaje) {
     // Leer los archivos en el índice
@@ -23,65 +18,61 @@ void guitCommit(const std::string& mensaje) {
     }
 
     // Obtener el nombre del repositorio del directorio actual
-    std::filesystem::path currentDirectory = std::filesystem::current_path();
-    std::string repositoryName = currentDirectory.filename().string();
+    std::string repositoryName = std::filesystem::current_path().filename().string();
 
     // Preparar la URL del servidor
     std::string url = "https://guit.alexmontv.nl/api/Commits/" + repositoryName + "/commit";
 
-    // Crear el cliente HTTP
-    web::http::client::http_client client(U(url));
-    web::http::http_request request(web::http::methods::POST);
+    // Inicializar libcurl
+    CURL *curl = curl_easy_init();
+    if (curl) {
+        CURLcode res;
+        curl_mime *form = nullptr;
+        curl_mimepart *field = nullptr;
 
-    // Generar un boundary único para multipart/form-data
-    std::string boundary = "------------------------" + std::to_string(std::chrono::system_clock::now().time_since_epoch().count());
+        // Crear el formulario multipart
+        form = curl_mime_init(curl);
 
-    // Construir el cuerpo multipart/form-data
-    std::ostringstream bodyStream;
-    bodyStream << "--" << boundary << "\r\n";
-    bodyStream << "Content-Disposition: form-data; name=\"message\"\r\n\r\n";
-    bodyStream << mensaje << "\r\n";
+        // Agregar el mensaje de commit
+        field = curl_mime_addpart(form);
+        curl_mime_name(field, "message");
+        curl_mime_data(field, mensaje.c_str(), CURL_ZERO_TERMINATED);
 
-    for (const auto& fileName : indexedFiles) {
-        std::ifstream file(fileName, std::ios::binary);
-        if (file.is_open()) {
-            std::ostringstream oss;
-            oss << file.rdbuf();
-            std::string fileContent = oss.str();
-
-            // Obtener la ruta relativa del archivo
-            std::string relativeFileName = std::filesystem::relative(fileName, currentDirectory).string();
-
-            bodyStream << "--" << boundary << "\r\n";
-            bodyStream << "Content-Disposition: form-data; name=\"files\"; filename=\"" << relativeFileName << "\"\r\n";
-            bodyStream << "Content-Type: application/octet-stream\r\n\r\n";
-            bodyStream << fileContent << "\r\n";
-        } else {
-            std::cerr << "Error: No se pudo abrir el archivo " << fileName << std::endl;
+        // Agregar los archivos al formulario
+        for (const auto& fileName : indexedFiles) {
+            field = curl_mime_addpart(form);
+            curl_mime_name(field, "files");
+            curl_mime_filedata(field, fileName.c_str());
         }
-    }
-    bodyStream << "--" << boundary << "--\r\n";
 
-    // Convertir el cuerpo a std::string
-    std::string body = bodyStream.str();
+        // Configurar la solicitud HTTP
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+        curl_easy_setopt(curl, CURLOPT_MIMEPOST, form);
 
-    // Configurar el encabezado Content-Type con el boundary generado
-    request.headers().add(U("Content-Type"), U("multipart/form-data; boundary=") + utility::conversions::to_string_t(boundary));
+        // Recibir la respuesta del servidor
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, [](char *ptr, size_t size, size_t nmemb, void *userdata) -> size_t {
+            size_t totalSize = size * nmemb;
+            std::cout << std::string(ptr, totalSize);
+            return totalSize;
+        });
 
-    // Asignar el cuerpo multipart/form-data al request
-    request.set_body(body);
+        // Realizar la solicitud HTTP
+        res = curl_easy_perform(curl);
 
-    // Enviar la solicitud
-    client.request(request).then([](web::http::http_response response) {
-        if (response.status_code() == web::http::status_codes::OK) {
+        if (res != CURLE_OK) {
+            std::cerr << "Error al realizar el commit: " << curl_easy_strerror(res) << std::endl;
+        } else {
             std::cout << "Commit realizado con éxito." << std::endl;
-        } else {
-            std::cerr << "Error al realizar el commit: " << response.status_code() << std::endl;
-            std::cerr << response.extract_string(true).get() << std::endl; // Depurar la respuesta del servidor
         }
-    }).wait();
 
-    // Después de hacer el commit, limpiar el índice.
-    std::ofstream indexFile(".guit/index", std::ios::trunc);
-    indexFile.close();
+        // Limpiar el formulario MIME y libcurl
+        curl_mime_free(form);
+        curl_easy_cleanup(curl);
+
+        // Después de hacer el commit, limpiar el índice.
+        std::ofstream indexFile(".guit/index", std::ios::trunc);
+        indexFile.close();
+    } else {
+        std::cerr << "Error al inicializar libcurl." << std::endl;
+    }
 }

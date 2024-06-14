@@ -237,13 +237,10 @@ GuitClient: CMakeFiles/GuitClient.dir/Commands/lsCommand.cpp.o
 GuitClient: CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o
 GuitClient: CMakeFiles/GuitClient.dir/build.make
 GuitClient: /home/alex/.conan2/p/b/cppre392ba417172d2/p/lib/libcpprest.a
-GuitClient: /home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/libssl.a
-GuitClient: /home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/libcrypto.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_log_setup.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_log.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_locale.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_iostreams.a
-GuitClient: /home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib/libz.a
 GuitClient: /home/alex/.conan2/p/b/bzip2bc91f376253e8/p/lib/libbz2.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_graph.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_fiber_numa.a
@@ -283,6 +280,10 @@ GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_date_time.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_context.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_container.a
 GuitClient: /home/alex/.conan2/p/b/boost2ef007b40ad77/p/lib/libboost_atomic.a
+GuitClient: /home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/lib/libcurl.a
+GuitClient: /home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/libssl.a
+GuitClient: /home/alex/.conan2/p/b/openscc38e2e8a963d/p/lib/libcrypto.a
+GuitClient: /home/alex/.conan2/p/b/zlib11781dd5b91c3/p/lib/libz.a
 GuitClient: CMakeFiles/GuitClient.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable GuitClient"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GuitClient.dir/link.txt --verbose=$(VERBOSE)

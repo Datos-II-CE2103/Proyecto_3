@@ -247,6 +247,9 @@ CONAN_HOST_PROFILE:STRING=default;auto-cmake
 //Command line arguments for conan install
 CONAN_INSTALL_ARGS:STRING=--build=missing
 
+//The directory containing a CMake configuration file for CURL.
+CURL_DIR:PATH=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators
+
 //Value Computed by CMake
 GuitClient_BINARY_DIR:STATIC=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug
 

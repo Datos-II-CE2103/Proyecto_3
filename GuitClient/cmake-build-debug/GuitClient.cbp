@@ -30,9 +30,11 @@
 					<Add option="-DBOOST_STACKTRACE_USE_BACKTRACE"/>
 					<Add option="-DBOOST_STACKTRACE_ADDR2LINE_LOCATION=&quot;/usr/bin/addr2line&quot;"/>
 					<Add option="-DBOOST_STACKTRACE_USE_ADDR2LINE"/>
+					<Add option="-DCURL_STATICLIB=1"/>
 					<Add directory="/home/alex/.conan2/p/b/cppre392ba417172d2/p/include"/>
 					<Add directory="/home/alex/.conan2/p/b/boost2ef007b40ad77/p/include"/>
 					<Add directory="/home/alex/.conan2/p/b/libba475828ab0a986/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include"/>
 					<Add directory="/usr/include/c++/13"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
 					<Add directory="/usr/include/c++/13/backward"/>
@@ -61,9 +63,11 @@
 					<Add option="-DBOOST_STACKTRACE_USE_BACKTRACE"/>
 					<Add option="-DBOOST_STACKTRACE_ADDR2LINE_LOCATION=&quot;/usr/bin/addr2line&quot;"/>
 					<Add option="-DBOOST_STACKTRACE_USE_ADDR2LINE"/>
+					<Add option="-DCURL_STATICLIB=1"/>
 					<Add directory="/home/alex/.conan2/p/b/cppre392ba417172d2/p/include"/>
 					<Add directory="/home/alex/.conan2/p/b/boost2ef007b40ad77/p/include"/>
 					<Add directory="/home/alex/.conan2/p/b/libba475828ab0a986/p/include"/>
+					<Add directory="/home/alex/.conan2/p/b/libcufe3d7a6edc62f/p/include"/>
 					<Add directory="/usr/include/c++/13"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
 					<Add directory="/usr/include/c++/13/backward"/>
@@ -194,6 +198,21 @@
 			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/BoostTargets.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURL-Target-debug.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURL-debug-x86_64-data.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURLConfig.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/CURLTargets.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\conan\build\Debug\generators\"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/conan/build/Debug/generators/OpenSSL-Target-debug.cmake">
