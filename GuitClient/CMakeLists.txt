@@ -25,7 +25,9 @@ add_executable(GuitClient main.cpp
         Commands/lsCommand.cpp
         Commands/lsCommand.h
         Commands/guitCommit.cpp
-        Commands/guitCommit.h)
+        Commands/guitCommit.h
+        Commands/guitStatus.cpp
+        Commands/guitStatus.h)
 
 
 target_link_libraries(GuitClient cpprestsdk::cpprestsdk)

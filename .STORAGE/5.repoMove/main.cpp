@@ -3,8 +3,7 @@
 #include <filesystem>
 
 int main() {
-    std::string nombre; // Nombre proporcionado por el usuario
-    std::cout << "Ingrese el nombre: ";
+    std::string nombre; // Nombre proporcionado por el cliente
     std::cin >> nombre;
 
     // Crear la carpeta principal si no existe

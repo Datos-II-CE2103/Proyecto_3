@@ -2,15 +2,15 @@
 #define NETWORK_MANAGER_H
 
 #include <cpprest/http_client.h>
-#include <cpprest/filestream.h>
-#include <string>
-#include <memory>
+#include <cpprest/json.h>
+#include <pplx/pplxtasks.h>
+#include <iostream>
 
 class NetworkManager {
 public:
     static NetworkManager& getInstance();
-
     pplx::task<web::json::value> post(const std::string& url, const std::string& json_body);
+    pplx::task<utility::string_t> get(const std::string& url);
 
 private:
     NetworkManager() = default;

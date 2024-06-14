@@ -4,6 +4,7 @@
 #include "InitCommand.h"
 #include "../Managers/DirectoryManager.h"
 #include "guitCommit.h"
+#include "guitStatus.h"
 #include <iostream>
 
 void processCommand(const std::string& command) {
@@ -23,6 +24,12 @@ void processCommand(const std::string& command) {
     } else {
     std::cout << "Mensaje de commit no especificado." << std::endl;
     }
+    }
+    else if (command.rfind("guit status ", 0) == 0) {
+        std::string filename = command.substr(12);
+        guitStatus(filename);
+    } else if (command == "guit status") {
+        guitStatus("");
     }
     else if (command == "ls") {
         guitLs();

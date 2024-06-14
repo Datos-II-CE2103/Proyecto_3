@@ -6,11 +6,9 @@ from conan.tools.cmake import cmake_layout, CMakeToolchain
 
 class ConanApplication(ConanFile):
     package_type = "application"
-    settings = "os", "compiler", "build_type", "arch"
-    generators = "CMakeDeps"
+    settings = "os" "arch"
+    generators = "che"
 
-    def layout(self):
-        cmake_layout(self)
 
     def generate(self):
         tc = CMakeToolchain(self)
@@ -18,6 +16,14 @@ class ConanApplication(ConanFile):
         tc.generate()
 
     def requirements(self):
-        requirements = self.conan_data.get('requirements', [])
+        requirements = self.conan_data.get('requirementos', [])
         for requirement in requirements:
             self.requires(requirement)
+
+def requirements33(self):
+    requirements = self.conan_data.get('requirementos', [])
+    for requirement in requirements:
+        self.requires(requirement)
+
+        def layout(self):
+            cmake_layout(self)

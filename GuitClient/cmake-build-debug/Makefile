@@ -225,6 +225,30 @@ Commands/guitCommit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.s
 .PHONY : Commands/guitCommit.cpp.s
 
+Commands/guitStatus.o: Commands/guitStatus.cpp.o
+.PHONY : Commands/guitStatus.o
+
+# target to build an object file
+Commands/guitStatus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.o
+.PHONY : Commands/guitStatus.cpp.o
+
+Commands/guitStatus.i: Commands/guitStatus.cpp.i
+.PHONY : Commands/guitStatus.i
+
+# target to preprocess a source file
+Commands/guitStatus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.i
+.PHONY : Commands/guitStatus.cpp.i
+
+Commands/guitStatus.s: Commands/guitStatus.cpp.s
+.PHONY : Commands/guitStatus.s
+
+# target to generate assembly for a file
+Commands/guitStatus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.s
+.PHONY : Commands/guitStatus.cpp.s
+
 Commands/lsCommand.o: Commands/lsCommand.cpp.o
 .PHONY : Commands/lsCommand.o
 
@@ -390,6 +414,9 @@ help:
 	@echo "... Commands/guitCommit.o"
 	@echo "... Commands/guitCommit.i"
 	@echo "... Commands/guitCommit.s"
+	@echo "... Commands/guitStatus.o"
+	@echo "... Commands/guitStatus.i"
+	@echo "... Commands/guitStatus.s"
 	@echo "... Commands/lsCommand.o"
 	@echo "... Commands/lsCommand.i"
 	@echo "... Commands/lsCommand.s"

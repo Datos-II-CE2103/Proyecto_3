@@ -2,22 +2,17 @@
 
 ## Proyecto 3 - Guit Repo
 
-### Algoritmos y Estructuras de Datos II (CE2103)
 
 ---
 
-#### Estudiantes
+
 
 - José Bernardo Barquero Bonilla (2023150476)
 - Alexander Montero Vargas (2023166058)
 
 #### Profesor
-
-- Jose Isaac Ramírez Herrera (<joramirez@itcr.ac.cr>)
-
----
-
-### Objetivo General
+#### Estudiantes por 2
+-
 
 - Diseñar e implementar un controlador de versiones en consola para facilitar el manejo de código
 

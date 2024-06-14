@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/Command.cpp" "CMakeFiles/GuitClient.dir/Commands/Command.cpp.o" "gcc" "CMakeFiles/GuitClient.dir/Commands/Command.cpp.o.d"
   "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/InitCommand.cpp" "CMakeFiles/GuitClient.dir/Commands/InitCommand.cpp.o" "gcc" "CMakeFiles/GuitClient.dir/Commands/InitCommand.cpp.o.d"
   "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.cpp" "CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o" "gcc" "CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o.d"
+  "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitStatus.cpp" "CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.o" "gcc" "CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.o.d"
   "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/lsCommand.cpp" "CMakeFiles/GuitClient.dir/Commands/lsCommand.cpp.o" "gcc" "CMakeFiles/GuitClient.dir/Commands/lsCommand.cpp.o.d"
   "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/FileStatus.cpp" "CMakeFiles/GuitClient.dir/Data_Structures/FileStatus.cpp.o" "gcc" "CMakeFiles/GuitClient.dir/Data_Structures/FileStatus.cpp.o.d"
   "/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Data_Structures/listaEnlazada.cpp" "CMakeFiles/GuitClient.dir/Data_Structures/listaEnlazada.cpp.o" "gcc" "CMakeFiles/GuitClient.dir/Data_Structures/listaEnlazada.cpp.o.d"
