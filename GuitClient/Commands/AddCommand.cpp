@@ -1,6 +1,7 @@
 #include "AddCommand.h"
 #include "../Data_Structures/FileStatus.h"
 #include "../Data_Structures/listaEnlazada.h"
+#include "../Managers/DirectoryManager.h"  // Incluir DirectoryManager para reutilizar readIndex
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -18,17 +19,6 @@ std::unordered_set<std::string> readGuitignore(const std::filesystem::path& path
         }
     }
     return ignoreFiles;
-}
-
-// Función para leer archivos ya añadidos de .guit/index
-std::unordered_set<std::string> readIndex(const std::filesystem::path& path) {
-    std::unordered_set<std::string> indexedFiles;
-    std::ifstream inFile(path);
-    std::string line;
-    while (std::getline(inFile, line)) {
-        indexedFiles.insert(line);
-    }
-    return indexedFiles;
 }
 
 // Función para añadir archivos al índice

@@ -118,6 +118,12 @@
 		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/InitCommand.h">
 			<Option target="GuitClient"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.h">
+			<Option target="GuitClient"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/lsCommand.cpp">
 			<Option target="GuitClient"/>
 		</Unit>

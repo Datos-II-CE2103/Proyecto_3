@@ -81,12 +81,12 @@ clean: CMakeFiles/GuitClient.dir/clean
 CMakeFiles/GuitClient.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target GuitClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target GuitClient"
 .PHONY : CMakeFiles/GuitClient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GuitClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GuitClient.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/GuitClient.dir/rule

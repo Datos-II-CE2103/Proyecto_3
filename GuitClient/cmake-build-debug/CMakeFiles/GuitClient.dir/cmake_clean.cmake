@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GuitClient.dir/Commands/Command.cpp.o.d"
   "CMakeFiles/GuitClient.dir/Commands/InitCommand.cpp.o"
   "CMakeFiles/GuitClient.dir/Commands/InitCommand.cpp.o.d"
+  "CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o"
+  "CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.o.d"
   "CMakeFiles/GuitClient.dir/Commands/lsCommand.cpp.o"
   "CMakeFiles/GuitClient.dir/Commands/lsCommand.cpp.o.d"
   "CMakeFiles/GuitClient.dir/Data_Structures/FileStatus.cpp.o"
