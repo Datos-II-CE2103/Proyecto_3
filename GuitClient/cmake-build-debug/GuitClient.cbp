@@ -128,6 +128,12 @@
 		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.h">
 			<Option target="GuitClient"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.cpp">
+			<Option target="GuitClient"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.h">
+			<Option target="GuitClient"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitStatus.cpp">
 			<Option target="GuitClient"/>
 		</Unit>

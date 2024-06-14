@@ -120,8 +120,15 @@ CMakeFiles/GuitClient.dir/Commands/Command.cpp.o: \
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/AddCommand.h \
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/InitCommand.h \
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/../Managers/DirectoryManager.h \
- /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
- /usr/include/c++/13/system_error \
+ /usr/include/c++/13/unordered_set \
+ /usr/include/c++/13/bits/unordered_set.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/filesystem \
+ /usr/include/c++/13/bits/fs_fwd.h /usr/include/c++/13/system_error \
  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \
@@ -178,16 +185,8 @@ CMakeFiles/GuitClient.dir/Commands/Command.cpp.o: \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h \
  /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/bits/unique_ptr.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
- /usr/include/c++/13/unordered_set \
- /usr/include/c++/13/bits/unordered_set.h \
- /usr/include/c++/13/bits/hashtable.h \
- /usr/include/c++/13/bits/hashtable_policy.h \
- /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/erase_if.h \
+ /usr/include/c++/13/bits/unique_ptr.h /usr/include/c++/13/bits/fs_dir.h \
+ /usr/include/c++/13/bits/fs_ops.h \
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitCommit.h \
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitStatus.h \
  /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/../Managers/NetworkManager.h \
@@ -1001,4 +1000,7 @@ CMakeFiles/GuitClient.dir/Commands/Command.cpp.o: \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/detail/dependent_type.hpp \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/read_op.hpp \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/shutdown_op.hpp \
- /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/write_op.hpp
+ /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/write_op.hpp \
+ /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/filestream.h \
+ /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/details/fileio.h \
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/guitRollBack.h

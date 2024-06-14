@@ -5,6 +5,7 @@
 #include "../Managers/DirectoryManager.h"
 #include "guitCommit.h"
 #include "guitStatus.h"
+#include "guitRollBack.h"
 #include <iostream>
 
 void processCommand(const std::string& command) {
@@ -33,7 +34,22 @@ void processCommand(const std::string& command) {
     }
     else if (command == "ls") {
         guitLs();
-    } else {
+    }else if (command.rfind("guit rollback ", 0) == 0) {
+        size_t firstSpace = command.find(' ', 14); // Encuentra el primer espacio después de "guit rollback "
+        if (firstSpace != std::string::npos) {
+            std::string filename = command.substr(14, firstSpace - 14);
+            std::string commitHash = command.substr(firstSpace + 1);
+            if (!filename.empty() && !commitHash.empty()) {
+                guitRollback(filename, commitHash);
+            } else {
+                std::cout << "Faltan argumentos para el comando rollback." << std::endl;
+            }
+        } else {
+            std::cout << "Formato incorrecto para el comando rollback." << std::endl;
+        }
+    }
+
+    else {
         std::cout << "Comando no reconocido." << std::endl;
     }
 }

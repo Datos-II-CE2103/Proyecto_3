@@ -27,7 +27,9 @@ add_executable(GuitClient main.cpp
         Commands/guitCommit.cpp
         Commands/guitCommit.h
         Commands/guitStatus.cpp
-        Commands/guitStatus.h)
+        Commands/guitStatus.h
+        Commands/guitRollBack.cpp
+        Commands/guitRollBack.h)
 
 
 target_link_libraries(GuitClient cpprestsdk::cpprestsdk)

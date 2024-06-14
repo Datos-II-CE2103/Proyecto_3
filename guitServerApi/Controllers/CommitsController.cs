@@ -95,27 +95,15 @@ public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] stri
 
                 bool isModified = false;
 
+                
                 if (existingFile == null)
                 {
-                    var newFile = new File
-                    {
-                        RepositoryId = repositoryId,
-                        FilePath = filePath,
-                        CreatedAt = DateTime.UtcNow
-                    };
+                    var newFile = new File { RepositoryId = repositoryId, FilePath = filePath, CreatedAt = DateTime.UtcNow };
                     _context.Files.Add(newFile);
                     await _context.SaveChangesAsync();
-
-                    var fileDelta = new FileDelta
-                    {
-                        FileId = newFile.Id,
-                        CommitId = commit.Id,
-                        Delta = Encoding.UTF8.GetBytes(newContent),
-                        CreatedAt = DateTime.UtcNow
-                    };
+                    var fileDelta = new FileDelta { FileId = newFile.Id, CommitId = commit.Id, Delta = Encoding.UTF8.GetBytes(newContent), CreatedAt = DateTime.UtcNow };
                     _context.FileDeltas.Add(fileDelta);
                     isModified = true;
-
                     System.IO.File.WriteAllText(filePath, newContent);
                 }
                 else
@@ -127,21 +115,15 @@ public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] stri
                         var diffs = dmp.diff_main(previousContent, newContent);
                         dmp.diff_cleanupSemantic(diffs);
                         var delta = dmp.diff_toDelta(diffs);
-                        var fileDelta = new FileDelta
-                        {
-                            FileId = existingFile.Id,
-                            CommitId = commit.Id,
-                            Delta = Encoding.UTF8.GetBytes(delta),
-                            CreatedAt = DateTime.UtcNow
-                        };
+                        var fileDelta = new FileDelta { FileId = existingFile.Id, CommitId = commit.Id, Delta = Encoding.UTF8.GetBytes(delta), CreatedAt = DateTime.UtcNow };
                         _context.FileDeltas.Add(fileDelta);
                         isModified = true;
-
                         var patches = dmp.patch_make(previousContent, diffs);
                         var result = dmp.patch_apply(patches, previousContent);
                         System.IO.File.WriteAllText(filePath, result[0].ToString());
                     }
                 }
+                
 
                 if (isModified)
                 {
@@ -180,19 +162,19 @@ public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] stri
         return Ok(commit);
     }
 
-    [HttpGet("{repositoryName}/rollback")]
+    [HttpGet("{repositoryId}/rollback")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public IActionResult RollbackFile(string repositoryName, [FromQuery] string filename, [FromQuery] string commitHash)
+    public IActionResult RollbackFile(string repositoryId, [FromQuery] string filename, [FromQuery] string commitHash)
     {
-        var repository = _context.Repositories.FirstOrDefault(r => r.Name == repositoryName);
+        var repository = _context.Repositories.FirstOrDefault(r => r.Id.ToString() == repositoryId);
         if (repository == null)
         {
             return NotFound("Repository not found.");
         }
 
-        var commit = _context.Commits.FirstOrDefault(c => c.RepositoryId == repository.Id && c.CommitHash == commitHash);
-        if (commit == null)
+        var targetCommit = _context.Commits.FirstOrDefault(c => c.RepositoryId == repository.Id && c.CommitHash == commitHash);
+        if (targetCommit == null)
         {
             return NotFound("Commit not found.");
         }
@@ -204,13 +186,41 @@ public async Task<IActionResult> CommitChanges(int repositoryId, [FromForm] stri
         }
 
         var fileDeltas = _context.FileDeltas
-            .Where(fd => fd.FileId == file.Id && fd.CommitId <= commit.Id)
+            .Where(fd => fd.FileId == file.Id && fd.CommitId <= targetCommit.Id)
             .OrderBy(fd => fd.CreatedAt)
             .ToList();
 
         var fileContent = ReconstructFileContent(fileDeltas);
 
-        return File(fileContent, "application/octet-stream", filename);
+        // Construir el path completo utilizando el formato id.name y filename
+        string fullPath = $"{repositoryId}.{repository.Name}/{filename}";
+
+        return File(Encoding.UTF8.GetBytes(fileContent), "application/octet-stream", fullPath);
+    }
+
+    private string ReconstructFileContent(List<FileDelta> deltas)
+    {
+        var dmp = new diff_match_patch();
+        string reconstructedContent = string.Empty;
+
+        foreach (var delta in deltas) {
+            string deltaString = Encoding.UTF8.GetString(delta.Delta);
+            Console.WriteLine($"Patch String: {deltaString}");
+            try {
+                var patches = dmp.patch_fromText(deltaString);
+                if (patches.Count > 0) {
+                    var result = dmp.patch_apply(patches, reconstructedContent);
+                    reconstructedContent = result[0].ToString();
+                } else {
+                    Console.WriteLine($"No valid patches found in delta string: {deltaString}");
+                }
+            } catch (ArgumentException ex) {
+                Console.WriteLine($"Invalid patch string: {deltaString}. Error: {ex.Message}");
+            }
+        }
+        
+
+        return reconstructedContent;
     }
 
   [HttpGet("{repositoryId}/status")]
@@ -284,19 +294,6 @@ public IActionResult GetFileStatus(string repositoryId, [FromQuery] string filen
         return Ok(deltas);
     }
 }
-    private string ReconstructFileContent(List<FileDelta> fileDeltas)
-    {
-        var dmp = new diff_match_patch();
-        string fileContent = "";
-        foreach (var delta in fileDeltas)
-        {
-            var deltaText = Encoding.UTF8.GetString(delta.Delta);
-            var diffs = stringToDiffs(deltaText);
-            fileContent = dmp.diff_text2(diffs);
-        }
-
-        return fileContent;
-    }
 
     private byte[] GetPreviousFileContent(int fileId)
     {

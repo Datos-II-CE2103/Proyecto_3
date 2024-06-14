@@ -225,6 +225,30 @@ Commands/guitCommit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitCommit.cpp.s
 .PHONY : Commands/guitCommit.cpp.s
 
+Commands/guitRollBack.o: Commands/guitRollBack.cpp.o
+.PHONY : Commands/guitRollBack.o
+
+# target to build an object file
+Commands/guitRollBack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.o
+.PHONY : Commands/guitRollBack.cpp.o
+
+Commands/guitRollBack.i: Commands/guitRollBack.cpp.i
+.PHONY : Commands/guitRollBack.i
+
+# target to preprocess a source file
+Commands/guitRollBack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.i
+.PHONY : Commands/guitRollBack.cpp.i
+
+Commands/guitRollBack.s: Commands/guitRollBack.cpp.s
+.PHONY : Commands/guitRollBack.s
+
+# target to generate assembly for a file
+Commands/guitRollBack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GuitClient.dir/build.make CMakeFiles/GuitClient.dir/Commands/guitRollBack.cpp.s
+.PHONY : Commands/guitRollBack.cpp.s
+
 Commands/guitStatus.o: Commands/guitStatus.cpp.o
 .PHONY : Commands/guitStatus.o
 
@@ -414,6 +438,9 @@ help:
 	@echo "... Commands/guitCommit.o"
 	@echo "... Commands/guitCommit.i"
 	@echo "... Commands/guitCommit.s"
+	@echo "... Commands/guitRollBack.o"
+	@echo "... Commands/guitRollBack.i"
+	@echo "... Commands/guitRollBack.s"
 	@echo "... Commands/guitStatus.o"
 	@echo "... Commands/guitStatus.i"
 	@echo "... Commands/guitStatus.s"

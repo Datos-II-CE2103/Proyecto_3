@@ -982,6 +982,8 @@ CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.o: \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/read_op.hpp \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/shutdown_op.hpp \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/write_op.hpp \
+ /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/filestream.h \
+ /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/details/fileio.h \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
  /usr/include/c++/13/bits/locale_facets_nonio.h \
@@ -990,4 +992,7 @@ CMakeFiles/GuitClient.dir/Commands/guitStatus.cpp.o: \
  /usr/include/libintl.h /usr/include/c++/13/bits/locale_facets_nonio.tcc \
  /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/iomanip \
  /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/codecvt \
- /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h
+ /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /mnt/c/Users/amv22/Dev/Proyecto_3/GuitClient/Commands/../Managers/DirectoryManager.h \
+ /usr/include/c++/13/unordered_set \
+ /usr/include/c++/13/bits/unordered_set.h

@@ -3,21 +3,8 @@
 #include <fstream>
 #include <filesystem>
 
-// Implementa la función getRepositoryId
-std::string getRepositoryId() {
-    // Leer el ID del repositorio del archivo de configuración
-    std::ifstream configFile(".guit/config");
-    std::string repositoryId;
-    std::string line;
-    while (std::getline(configFile, line)) {
-        if (line.substr(0, 3) == "id=") {
-            repositoryId = line.substr(3);
-            break;
-        }
-    }
-    configFile.close();
-    return repositoryId;
-}
+#include "../Managers/DirectoryManager.h"
+#include "../Managers/NetworkManager.h"
 
 // Implementa la función guitStatus
 void guitStatus(const std::string& filename) {

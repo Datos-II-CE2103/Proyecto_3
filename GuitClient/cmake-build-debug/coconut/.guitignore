@@ -1,0 +1,3 @@
+# Archivos o directorios a ignorar en .guit
+budu.lua
+nuevo.rust

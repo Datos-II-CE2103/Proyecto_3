@@ -978,4 +978,6 @@ CMakeFiles/GuitClient.dir/Managers/NetworkManager.cpp.o: \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/detail/dependent_type.hpp \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/read_op.hpp \
  /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/shutdown_op.hpp \
- /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/write_op.hpp
+ /home/alex/.conan2/p/b/boost2ef007b40ad77/p/include/boost/asio/ssl/detail/write_op.hpp \
+ /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/filestream.h \
+ /home/alex/.conan2/p/b/cppre392ba417172d2/p/include/cpprest/details/fileio.h
